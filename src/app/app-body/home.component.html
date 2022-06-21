@@ -1,0 +1,143 @@
+<div class="app-body">
+  <div class="card-container">
+    <nz-tabset nzType="card">
+      <nz-tab nzTitle="Content & Context">
+        <p class="tab1-question-txt">
+          {{ tab1CurrentData ? tab1CurrentData.question : "" }}
+        </p>
+        <nz-radio-group [(ngModel)]="tab1CurrentData.questionSerial" >
+          <label nz-radio nzValue="A" (click)="changeRadioBtn(tab1CurrentData.questionID,1)">{{
+            tab1CurrentData ? tab1CurrentData.choiceOption1 : ""
+          }}</label>
+          <label nz-radio nzValue="B" (click)="changeRadioBtn(tab1CurrentData.questionID,2)">{{
+            tab1CurrentData ? tab1CurrentData.choiceOption2 : ""
+          }}</label>
+          <label nz-radio nzValue="C" (click)="changeRadioBtn(tab1CurrentData.questionID,3)">{{
+            tab1CurrentData ? tab1CurrentData.choiceOption3 : ""
+          }}</label>
+          <label nz-radio nzValue="D" (click)="changeRadioBtn(tab1CurrentData.questionID,4)">{{
+            tab1CurrentData ? tab1CurrentData.choiceOption4 : ""
+          }}</label>
+          <label nz-radio nzValue="E" (click)="changeRadioBtn(tab1CurrentData.questionID,5)">{{
+            tab1CurrentData ? tab1CurrentData.choiceOption5 : ""
+          }}</label>
+        </nz-radio-group>
+
+        <div class="tab1-button-back-forward">
+          <nz-button-group>
+            <button
+              nz-button
+              nzType="primary"
+              (click)="tab1BackwardBtnClick()"
+              [disabled]="tab1CurrentDataIndex === 0"
+            >
+              <i nz-icon nzType="left"></i>
+              Previous
+            </button>
+            <button
+              nz-button
+              nzType="primary"
+              (click)="tab1ForwardBtnClick()"
+              [disabled]="tab1CurrentDataIndex === tab1Data.length - 1"
+            >
+              Next
+              <i nz-icon nzType="right"></i>
+            </button>
+          </nz-button-group>
+        </div>
+      </nz-tab>
+
+      <nz-tab nzTitle="Representation & Format">
+        <p class="tab2-question-txt">
+          {{ tab2CurrentData ? tab2CurrentData.question : "" }}
+        </p>
+        <nz-radio-group [(ngModel)]="tab2CurrentData.questionSerial">
+          <label nz-radio nzValue="A" (click)="changeRadioBtn(tab2CurrentData.questionID,1)">{{
+            tab2CurrentData ? tab2CurrentData.choiceOption1 : ""
+          }}</label>
+          <label nz-radio nzValue="B" (click)="changeRadioBtn(tab2CurrentData.questionID,2)">{{
+            tab2CurrentData ? tab2CurrentData.choiceOption2 : ""
+          }}</label>
+          <label nz-radio nzValue="C" (click)="changeRadioBtn(tab2CurrentData.questionID,3)">{{
+            tab2CurrentData ? tab2CurrentData.choiceOption3 : ""
+          }}</label>
+          <label nz-radio nzValue="D" (click)="changeRadioBtn(tab2CurrentData.questionID,4)">{{
+            tab2CurrentData ? tab2CurrentData.choiceOption4 : ""
+          }}</label>
+          <label nz-radio nzValue="E" (click)="changeRadioBtn(tab2CurrentData.questionID,5)">{{
+            tab2CurrentData ? tab2CurrentData.choiceOption5 : ""
+          }}</label>
+        </nz-radio-group>
+
+        <div class="tab2-button-back-forward">
+          <nz-button-group>
+            <button
+              nz-button
+              nzType="primary"
+              (click)="tab2BackwardBtnClick()"
+              [disabled]="tab2CurrentDataIndex === 0"
+            >
+              <i nz-icon nzType="left"></i>
+              Previous
+            </button>
+            <button
+              nz-button
+              nzType="primary"
+              (click)="tab2ForwardBtnClick()"
+              [disabled]="tab2CurrentDataIndex === tab2Data.length - 1"
+            >
+            Next
+              <i nz-icon nzType="right"></i>
+            </button>
+          </nz-button-group>
+        </div>
+      </nz-tab>
+
+      <nz-tab nzTitle="Hosting Environment Capabilities">
+        <p class="tab3-question-txt">
+          {{ tab3CurrentData ? tab3CurrentData.question : "" }}
+        </p>
+        <nz-radio-group [(ngModel)]="tab3CurrentData.questionSerial">
+          <label nz-radio nzValue="A" (click)="changeRadioBtn(tab3CurrentData.questionID,1)">{{
+            tab3CurrentData ? tab3CurrentData.choiceOption1 : ""
+          }}</label>
+          <label nz-radio nzValue="B" (click)="changeRadioBtn(tab3CurrentData.questionID,2)">{{
+            tab3CurrentData ? tab3CurrentData.choiceOption2 : ""
+          }}</label>
+          <label nz-radio nzValue="C" (click)="changeRadioBtn(tab3CurrentData.questionID,3)">{{
+            tab3CurrentData ? tab3CurrentData.choiceOption3 : ""
+          }}</label>
+          <label nz-radio nzValue="D" (click)="changeRadioBtn(tab3CurrentData.questionID,4)">{{
+            tab3CurrentData ? tab3CurrentData.choiceOption4 : ""
+          }}</label>
+          <label nz-radio nzValue="E" (click)="changeRadioBtn(tab3CurrentData.questionID,5)">{{
+            tab3CurrentData ? tab3CurrentData.choiceOption5 : ""
+          }}</label>
+        </nz-radio-group>
+
+        <div class="tab3-button-back-forward">
+          <nz-button-group>
+            <button
+              nz-button
+              nzType="primary"
+              (click)="tab3BackwardBtnClick()"
+              [disabled]="tab3CurrentDataIndex === 0"
+            >
+              <i nz-icon nzType="left"></i>
+              Previous
+            </button>
+            <button
+              nz-button
+              nzType="primary"
+              (click)="tab3ForwardBtnClick()"
+              [disabled]="tab3CurrentDataIndex === tab3Data.length - 1"
+            >
+              Next
+              <i nz-icon nzType="right"></i>
+            </button>
+          </nz-button-group>
+        </div>
+      </nz-tab>
+    </nz-tabset>
+  </div>
+</div>
