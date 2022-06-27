@@ -1,51 +1,64 @@
 
       
     .app-body {
-        margin: 1% 20% 0% 20%;
-    }
-
-      .card-container ::ng-deep p {
-        margin: 0;
-      }
-      .card-container ::ng-deep > .ant-tabs-card .ant-tabs-content {
-        height: 400px;
-        margin-top: -16px;
-      }
-      .card-container ::ng-deep > .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
-        background: #fff;
-        padding: 16px;
-      }
-      .card-container ::ng-deep > .ant-tabs-card > .ant-tabs-nav::before {
-        display: none;
-      }
-      .card-container ::ng-deep > .ant-tabs-card .ant-tabs-tab {
-        border-color: transparent;
-        background: #300861;
-        color: #fff;
-      }
-      .card-container ::ng-deep > .ant-tabs-card .ant-tabs-tab-active {
-        border-color: #fff;
-        color: #fff !important;
-        background: #b43c4a;
-      }
-
-      
-      [nz-radio] {
-        display: block;
-        height: 32px;
-        line-height: 32px;
-      }
-  
-      .button-back-forward{
-        float: right;
-        height: 47%;
-        display: flex;
-        align-items: flex-end;
-    }
-
-
-    p.tab3-question-txt {
-      padding-bottom: 20px;
+      margin: 1% 20% 0% 20%;
   }
 
+    .card-container ::ng-deep p {
+      margin: 0;
+    }
+    .card-container ::ng-deep > .ant-tabs-card .ant-tabs-content {
+      height: 400px;
+      margin-top: -16px;
+    }
+    .card-container ::ng-deep > .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
+      background: #fff;
+      padding: 16px;
+    }
+    .card-container ::ng-deep > .ant-tabs-card > .ant-tabs-nav::before {
+      display: none;
+    }
+    .card-container ::ng-deep > .ant-tabs-card .ant-tabs-tab {
+      border-color: transparent;
+      background: #300861;
+      color: #fff;
+    }
+    .card-container ::ng-deep > .ant-tabs-card .ant-tabs-tab-active {
+      border-color: #fff;
+      color: #fff !important;
+      background: #b43c4a;
+    }
+
     
+    [nz-radio] {
+      display: block;
+      height: 32px;
+      line-height: 32px;
+    }
+
+
+
+
+
+
+
+.submit-btn {
+  float: right;
+}
+
+.tab-question-txt {
+margin-bottom: 20px !important;
+}
+
+.options{
+margin-bottom: 10px !important;
+}
+
+.tab-button-back-forward{
+height: 15%;
+display: flex;
+align-items: flex-end;
+}
+
+
+  

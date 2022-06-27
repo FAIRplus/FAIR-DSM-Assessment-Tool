@@ -1,143 +1,185 @@
 <div class="app-body">
   <div class="card-container">
     <nz-tabset nzType="card">
-      <nz-tab nzTitle="Content & Context">
-        <p class="tab1-question-txt">
-          {{ tab1CurrentData ? tab1CurrentData.question : "" }}
+      <nz-tab nzTitle="Representation & Format" (nzClick)="tabClicked(1)">
+        <p class="tab-question-txt">
+          {{ tab1CurrentData ? tab1CurrentData.Question : "" }}
         </p>
-        <nz-radio-group [(ngModel)]="tab1CurrentData.questionSerial" >
-          <label nz-radio nzValue="A" (click)="changeRadioBtn(tab1CurrentData.questionID,1)">{{
-            tab1CurrentData ? tab1CurrentData.choiceOption1 : ""
-          }}</label>
-          <label nz-radio nzValue="B" (click)="changeRadioBtn(tab1CurrentData.questionID,2)">{{
-            tab1CurrentData ? tab1CurrentData.choiceOption2 : ""
-          }}</label>
-          <label nz-radio nzValue="C" (click)="changeRadioBtn(tab1CurrentData.questionID,3)">{{
-            tab1CurrentData ? tab1CurrentData.choiceOption3 : ""
-          }}</label>
-          <label nz-radio nzValue="D" (click)="changeRadioBtn(tab1CurrentData.questionID,4)">{{
-            tab1CurrentData ? tab1CurrentData.choiceOption4 : ""
-          }}</label>
-          <label nz-radio nzValue="E" (click)="changeRadioBtn(tab1CurrentData.questionID,5)">{{
-            tab1CurrentData ? tab1CurrentData.choiceOption5 : ""
-          }}</label>
-        </nz-radio-group>
+        <div
+          *ngFor="let item of tab1CurrentData.Options; let i = index"
+          class="options"
+        >
+          <ng-container *ngIf="tab1CurrentData.MultipleAllowed === false">
+            <input
+              type="radio"
+              [checked]="item.IsSelected"
+              (change)="radioChecked(1, tab1CurrentData, item, $event)"
+            />
+            <label for="{{ item.IndicatorText }}">
+              {{ item.IndicatorText }}</label
+            >
+          </ng-container>
 
-        <div class="tab1-button-back-forward">
-          <nz-button-group>
-            <button
-              nz-button
-              nzType="primary"
-              (click)="tab1BackwardBtnClick()"
-              [disabled]="tab1CurrentDataIndex === 0"
+          <ng-container *ngIf="tab1CurrentData.MultipleAllowed === true">
+            <input
+              type="checkbox"
+              [checked]="item.IsSelected"
+              (change)="radioChecked(1, tab1CurrentData, item, $event)"
+            />
+            <label for="{{ item.IndicatorText }}">
+              {{ item.IndicatorText }}</label
             >
-              <i nz-icon nzType="left"></i>
-              Previous
-            </button>
-            <button
-              nz-button
-              nzType="primary"
-              (click)="tab1ForwardBtnClick()"
-              [disabled]="tab1CurrentDataIndex === tab1Data.length - 1"
-            >
-              Next
-              <i nz-icon nzType="right"></i>
-            </button>
-          </nz-button-group>
+          </ng-container>
         </div>
       </nz-tab>
 
-      <nz-tab nzTitle="Representation & Format">
-        <p class="tab2-question-txt">
-          {{ tab2CurrentData ? tab2CurrentData.question : "" }}
+      <nz-tab nzTitle="Content & Context" (nzClick)="tabClicked(2)">
+        <p class="tab-question-txt">
+          {{ tab2CurrentData ? tab2CurrentData.Question : "" }}
         </p>
-        <nz-radio-group [(ngModel)]="tab2CurrentData.questionSerial">
-          <label nz-radio nzValue="A" (click)="changeRadioBtn(tab2CurrentData.questionID,1)">{{
-            tab2CurrentData ? tab2CurrentData.choiceOption1 : ""
-          }}</label>
-          <label nz-radio nzValue="B" (click)="changeRadioBtn(tab2CurrentData.questionID,2)">{{
-            tab2CurrentData ? tab2CurrentData.choiceOption2 : ""
-          }}</label>
-          <label nz-radio nzValue="C" (click)="changeRadioBtn(tab2CurrentData.questionID,3)">{{
-            tab2CurrentData ? tab2CurrentData.choiceOption3 : ""
-          }}</label>
-          <label nz-radio nzValue="D" (click)="changeRadioBtn(tab2CurrentData.questionID,4)">{{
-            tab2CurrentData ? tab2CurrentData.choiceOption4 : ""
-          }}</label>
-          <label nz-radio nzValue="E" (click)="changeRadioBtn(tab2CurrentData.questionID,5)">{{
-            tab2CurrentData ? tab2CurrentData.choiceOption5 : ""
-          }}</label>
-        </nz-radio-group>
+        <div
+          *ngFor="let item of tab2CurrentData.Options; let i = index"
+          class="options"
+        >
+          <ng-container *ngIf="tab2CurrentData.MultipleAllowed === false">
+            <input
+              type="radio"
+              [checked]="item.IsSelected"
+              (change)="radioChecked(2, tab2CurrentData, item, $event)"
+            />
+            <label for="{{ item.IndicatorText }}">
+              {{ item.IndicatorText }}</label
+            >
+          </ng-container>
 
-        <div class="tab2-button-back-forward">
-          <nz-button-group>
-            <button
-              nz-button
-              nzType="primary"
-              (click)="tab2BackwardBtnClick()"
-              [disabled]="tab2CurrentDataIndex === 0"
+          <ng-container *ngIf="tab2CurrentData.MultipleAllowed === true">
+            <input
+              type="checkbox"
+              [checked]="item.IsSelected"
+              (change)="radioChecked(2, tab2CurrentData, item, $event)"
+            />
+            <label for="{{ item.IndicatorText }}">
+              {{ item.IndicatorText }}</label
             >
-              <i nz-icon nzType="left"></i>
-              Previous
-            </button>
-            <button
-              nz-button
-              nzType="primary"
-              (click)="tab2ForwardBtnClick()"
-              [disabled]="tab2CurrentDataIndex === tab2Data.length - 1"
-            >
-            Next
-              <i nz-icon nzType="right"></i>
-            </button>
-          </nz-button-group>
+          </ng-container>
         </div>
       </nz-tab>
 
-      <nz-tab nzTitle="Hosting Environment Capabilities">
-        <p class="tab3-question-txt">
-          {{ tab3CurrentData ? tab3CurrentData.question : "" }}
+      <nz-tab
+        nzTitle="Hosting Environment Capabilities"
+        (nzClick)="tabClicked(3)"
+      >
+        <p class="tab-question-txt">
+          {{ tab3CurrentData ? tab3CurrentData.Question : "" }}
         </p>
-        <nz-radio-group [(ngModel)]="tab3CurrentData.questionSerial">
-          <label nz-radio nzValue="A" (click)="changeRadioBtn(tab3CurrentData.questionID,1)">{{
-            tab3CurrentData ? tab3CurrentData.choiceOption1 : ""
-          }}</label>
-          <label nz-radio nzValue="B" (click)="changeRadioBtn(tab3CurrentData.questionID,2)">{{
-            tab3CurrentData ? tab3CurrentData.choiceOption2 : ""
-          }}</label>
-          <label nz-radio nzValue="C" (click)="changeRadioBtn(tab3CurrentData.questionID,3)">{{
-            tab3CurrentData ? tab3CurrentData.choiceOption3 : ""
-          }}</label>
-          <label nz-radio nzValue="D" (click)="changeRadioBtn(tab3CurrentData.questionID,4)">{{
-            tab3CurrentData ? tab3CurrentData.choiceOption4 : ""
-          }}</label>
-          <label nz-radio nzValue="E" (click)="changeRadioBtn(tab3CurrentData.questionID,5)">{{
-            tab3CurrentData ? tab3CurrentData.choiceOption5 : ""
-          }}</label>
-        </nz-radio-group>
+        <div
+          *ngFor="let item of tab3CurrentData.Options; let i = index"
+          class="options"
+        >
+          <ng-container *ngIf="tab3CurrentData.MultipleAllowed === false">
+            <input
+              type="radio"
+              [checked]="item.IsSelected"
+              (change)="radioChecked(3, tab3CurrentData, item, $event)"
+            />
+            <label for="{{ item.IndicatorText }}">
+              {{ item.IndicatorText }}</label
+            >
+          </ng-container>
 
-        <div class="tab3-button-back-forward">
-          <nz-button-group>
-            <button
-              nz-button
-              nzType="primary"
-              (click)="tab3BackwardBtnClick()"
-              [disabled]="tab3CurrentDataIndex === 0"
+          <ng-container *ngIf="tab3CurrentData.MultipleAllowed">
+            <input
+              type="checkbox"
+              [checked]="item.IsSelected"
+              (change)="radioChecked(3, tab3CurrentData, item, $event)"
+            />
+            <label for="{{ item.IndicatorText }}">
+              {{ item.IndicatorText }}</label
             >
-              <i nz-icon nzType="left"></i>
-              Previous
-            </button>
-            <button
-              nz-button
-              nzType="primary"
-              (click)="tab3ForwardBtnClick()"
-              [disabled]="tab3CurrentDataIndex === tab3Data.length - 1"
-            >
-              Next
-              <i nz-icon nzType="right"></i>
-            </button>
-          </nz-button-group>
+          </ng-container>
         </div>
       </nz-tab>
     </nz-tabset>
+
+    <button
+      nz-button
+      class="submit-btn"
+      nzType="primary"
+      (click)="submitResponse()"
+    >
+      Submit
+    </button>
+
+    <div class="tab-button-back-forward">
+      <nz-button-group>
+        <button
+          nz-button
+          nzType="primary"
+          (click)="tabBackwardBtnClick()"
+          [disabled]="currentTabBackwardBtnDisable"
+        >
+          <i nz-icon nzType="left"></i>
+          Previous
+        </button>
+        <button
+          nz-button
+          nzType="primary"
+          (click)="tabForwardBtnClick()"
+          [disabled]="currentTabForwardBtnDisable"
+        >
+          Next
+          <i nz-icon nzType="right"></i>
+        </button>
+      </nz-button-group>
+    </div>
   </div>
 </div>
+
+<nz-modal
+  [(nzVisible)]="isVisible"
+  [nzTitle]="modalTitle"
+  [nzContent]="modalContent"
+  [nzFooter]="modalFooter"
+  (nzOnCancel)="handleCancel()"
+  [nzWidth]="900"
+>
+  <ng-template #modalTitle>FAIRplus-DSM Maturity Result:</ng-template>
+
+  <ng-template #modalContent>
+    <nz-table
+      #basicTable
+      [nzData]="userResponseData"
+      [nzFrontPagination]="false"
+    >
+      <thead>
+        <tr>
+          <th>Level</th>
+          <th>Representation & Format</th>
+          <th>Content & Context</th>
+          <th>Hosting Environment Capabilities</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of basicTable.data">
+          <td>{{ data.Level }}</td>
+          <td>{{ data.PresentationScore }}</td>
+          <td>{{ data.ContentScore }}</td>
+          <td>{{ data.Hosting }}</td>
+          <td>{{ data.TotalScoreByLevel }}</td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </ng-template>
+
+  <ng-template #modalFooter>
+    <button
+      nz-button
+      nzType="primary"
+      (click)="handleOk()"
+      [nzLoading]="isConfirmLoading"
+    >
+      OK
+    </button>
+  </ng-template>
+</nz-modal>

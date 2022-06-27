@@ -1,13 +1,32 @@
 
 export interface QuestionModel {
-questionID: number;
-questionCategory: number;
-questionSerial: number;
-question: string;
-choiceOption1: string;
-choiceOption2: string;
-choiceOption3: string;
-choiceOption4: string;
-choiceOption5: string;
-answer: number;
-}
+    DSMCategory: string;
+    DSMCategoryID: number;
+    SectioName: string;
+    SectionId: number;
+    Question: string;
+    Options?: (OptionsEntity)[] | null;
+    MultipleAllowed: boolean;
+    NoneOfAboveAllowed: boolean;
+    IsAnswered: boolean;
+  }
+  export interface OptionsEntity {
+    Id: number;
+    IndicatorId: string | null;
+    IndicatorText: string;
+    MaturityLevel: string | null;
+    Category: string;
+    SubCategory?: string | null;
+    URI?: string |null;
+    IsSelected: boolean;
+  }
+
+
+  export interface UserResponseData {
+    Level: string;
+    PresentationScore: number | string;
+    ContentScore: number | string;
+    Hosting: number| string;
+    TotalScoreByLevel: number| string;
+  }
+  

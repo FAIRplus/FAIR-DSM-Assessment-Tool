@@ -19,27 +19,4 @@ export class AppService {
     console.log(this.appData);
   })
  }
-
- 
-
-  /*
-  pingServer(ip: String): Observable<ServerModel>{
-    return this.http.get<ServerModel>(`${this.BACKEND_BASE_URL}/pingserver/${ip}`)
-    .pipe(catchError(this.handleError));
-  }
-
-  private handleError(errorRes: HttpErrorResponse) {
-    if (errorRes.error instanceof ErrorEvent) {
-      // A client-side or network error occurred. Handle it accordingly.
-      console.error('An error occurred in client side:', errorRes.error.message);
-    } else {
-      // The backend returned an unsuccessful response code.
-      // The response body may contain clues as to what went wrong.
-        console.error('Server Side Error: ', errorRes);
-    }
-    // Return an observable with a user-facing error message.
-    return throwError(() => new Error("'There is a problem with the service. We are notified & working on it. Please try again later.'"));
-  }
-
-  */
 }
