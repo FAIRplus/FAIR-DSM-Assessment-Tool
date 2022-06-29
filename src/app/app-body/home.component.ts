@@ -149,6 +149,7 @@ export class HomeComponent implements OnInit {
     return level;
   }
 
+  allAnsweredQ: any[] = [];
   submitResponse() {
     let answeredQuestion = this.appService.appData.filter(
       (dt: QuestionModel) => {
@@ -192,6 +193,7 @@ export class HomeComponent implements OnInit {
     }
 
 
+    this.allAnsweredQ = allAnsweredLevels;
     // representaion
     let count_L_0_R_total = allAnsweredLevels.filter((x:any)=>{
       return x.DSMCategoryID===1 && x.level===0
@@ -442,4 +444,52 @@ export class HomeComponent implements OnInit {
   handleCancel(): void {
     this.isVisible = false;
   }
+
+
+    // show modal ForDetailedResult
+    isVisibleForDetailedResult = false;
+    isConfirmLoadingForDetailedResult = false;
+    handleOkForDetailedResult(): void {
+      this.isVisibleForDetailedResult = false;
+      this.isConfirmLoadingForDetailedResult = false;
+    }
+  
+    handleCancelForDetailedResult(): void {
+      this.isVisibleForDetailedResult = false;
+    }
+
+    detailedResultData: any[] =[];
+    detailedResultLevelToFilter = 0;
+    selectedIndicatorsForDetailedResultLevel = 0;
+    showDetailedResult(dt:any){
+      this.isVisibleForDetailedResult = true;
+      this.isConfirmLoadingForDetailedResult = true;
+      let level =   dt[dt.length-1];
+      this.detailedResultLevelToFilter = level;
+
+      this.detailedResultData = [];
+
+      let allQuestions = this.appService.appData;
+      for (let i = 0; i < allQuestions.length; i++) {
+        // loop through each question
+          for (let j = 0;j < allQuestions[i].Options?.length;j++ ) {
+            // loop through each option
+              const mValues = allQuestions[i].Options[j].MaturityLevel;
+              if(mValues && mValues.includes(dt)){
+                this.detailedResultData.push({
+                  IndicatorText: allQuestions[i].Options[j].IndicatorText,
+                  Category: allQuestions[i].Options[j].Category,
+                  IsSelected: allQuestions[i].Options[j].IsSelected
+                  })
+              }
+             
+          }
+      }
+
+      this.selectedIndicatorsForDetailedResultLevel = this.detailedResultData.filter((x:any)=>{
+        return x.IsSelected===true
+      }).length;
+      console.log("this.detailedResultData: ",this.detailedResultData);
+
+    }
 }

@@ -16,7 +16,7 @@
               (change)="radioChecked(1, tab1CurrentData, item, $event)"
             />
             <label for="{{ item.IndicatorText }}">
-              {{ item.IndicatorText }}</label
+               {{ item.IndicatorText }}<a href="{{item.URI}}" target="_blank" *ngIf="item.URI"> (link)</a></label
             >
           </ng-container>
 
@@ -158,6 +158,7 @@
           <th>Content & Context</th>
           <th>Hosting Environment Capabilities</th>
           <th>Total</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
@@ -167,6 +168,16 @@
           <td>{{ data.ContentScore }}</td>
           <td>{{ data.Hosting }}</td>
           <td>{{ data.TotalScoreByLevel }}</td>
+          <td>
+            <button
+            nz-button
+            class="submit-btn"
+            nzType="primary"
+            (click)="showDetailedResult(data.Level)"
+          >
+            Details
+          </button>
+          </td>
         </tr>
       </tbody>
     </nz-table>
@@ -183,3 +194,43 @@
     </button>
   </ng-template>
 </nz-modal>
+
+<nz-modal
+  [(nzVisible)]="isVisibleForDetailedResult"
+  [nzTitle]="modalTitleForDetailedResult"
+  [nzContent]="modalContentForDetailedResult"
+  [nzFooter]="modalFooterForDetailedResult"
+  (nzOnCancel)="handleCancelForDetailedResult()"
+  [nzWidth]="900"
+>
+  <ng-template #modalTitleForDetailedResult>Detailed Assessment For Level {{detailedResultLevelToFilter}} :</ng-template>
+
+  <ng-template #modalContentForDetailedResult>
+    <div style="background: #ECECEC;padding:30px; margin-bottom: 20px;">
+      <p class="tab-question-txt">You have achieved {{selectedIndicatorsForDetailedResultLevel}} points out of {{detailedResultData.length}} for level {{detailedResultLevelToFilter}}</p>
+      <div *ngFor="let indicatorData of detailedResultData; let i = index" class="detailed-result-dev" >
+        <ng-container>
+          <input
+            type="checkbox"
+            [checked]="indicatorData.IsSelected" disabled
+          />
+          <label for="{{ indicatorData.IndicatorText }}" [className]="indicatorData.IsSelected === true ? 'text-color-green' : 'text-color-red'">
+            {{ indicatorData.IndicatorText }}</label
+          >
+        </ng-container>
+    </div>
+    </div>
+
+  </ng-template>
+
+  <ng-template #modalFooterForDetailedResult>
+    <button
+      nz-button
+      nzType="primary"
+      (click)="handleOkForDetailedResult()"
+    >
+      OK
+    </button>
+  </ng-template>
+</nz-modal>
+
