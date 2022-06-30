@@ -52,6 +52,7 @@ docker rm -f YOUR_DOCKER_CONTAINER_ID
 docker rmi -f YOUR_DOCKER_IMAGE_ID
 
 ## Run with docker image from dockerhub
-docker run -p 4200:4200 -d your_dockerhub_username/your_image_name :version_name
+`docker run -p 4200:4200 -d your_dockerhub_username/your_image_name :version_name`
+
 example: docker run -p 4200:4200 -d imonbayazid/fair-dsm-tool:v2
 Finally, navigate to `http://localhost:4200/`.
