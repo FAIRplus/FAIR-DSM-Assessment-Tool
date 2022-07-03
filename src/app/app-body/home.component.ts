@@ -25,6 +25,8 @@ export class HomeComponent implements OnInit {
   tab2Data: QuestionModel[] = [];
   tab3Data: QuestionModel[] = [];
 
+  baseLevelURI = "https://fairplus.github.io/Data-Maturity/docs/Levels/Level";
+
   constructor(private appService: AppService) {}
 
   ngOnInit(): void {
@@ -51,15 +53,15 @@ export class HomeComponent implements OnInit {
     });
     // load all the tab data by filterin theier cateory
     this.tab1Data = this.appService.appData.filter((dt: any) => {
-      return dt.DSMCategoryID === 1;
+      return dt.DSMCategoryId === 1;
     });
 
     this.tab2Data = this.appService.appData.filter((dt: any) => {
-      return dt.DSMCategoryID === 2;
+      return dt.DSMCategoryId === 2;
     });
 
     this.tab3Data = this.appService.appData.filter((dt: any) => {
-      return dt.DSMCategoryID === 3;
+      return dt.DSMCategoryId === 3;
     });
     // set first question as default data of eahc tab
     this.tab1CurrentData = this.tab1Data[0];
@@ -107,7 +109,7 @@ export class HomeComponent implements OnInit {
         this.tab3CurrentData = this.tab3Data[this.tab3CurrentDataIndex];
         //console.log('tab1CurrentData: ', this.tab1CurrentData);
         this.setCurrentBackwardForwardButton(this.tab3CurrentDataIndex,this.tab3Data);
-    }  
+    }
 
   }
 
@@ -156,7 +158,7 @@ export class HomeComponent implements OnInit {
         return dt.IsAnswered === true;
       }
     );
-    if ( answeredQuestion &&answeredQuestion.length === this.appService.appData.length) 
+    if ( answeredQuestion &&answeredQuestion.length === this.appService.appData.length)
     {
       this.isVisible = true;
 
@@ -180,15 +182,15 @@ export class HomeComponent implements OnInit {
               const connectedLevels = this.checkLevel(mValues)
               //  loop through each connected level
               for(let k=0;k<connectedLevels.length;k++){
-                // store each connected level for each option for each question; 
+                // store each connected level for each option for each question;
                   allAnsweredLevels.push({
-                    DSMCategoryID: allQuestions[i].DSMCategoryID,
+                    DSMCategoryId: allQuestions[i].DSMCategoryId,
                     level: connectedLevels[k],
                     isSelected: allQuestions[i].Options[j].IsSelected
                   });
               }
             }
-           
+
         }
     }
 
@@ -196,144 +198,145 @@ export class HomeComponent implements OnInit {
     this.allAnsweredQ = allAnsweredLevels;
     // representaion
     let count_L_0_R_total = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===1 && x.level===0
+      return x.DSMCategoryId===1 && x.level===0
     }).length;
     let count_L_0_R_selected = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===1 && x.level===0 && x.isSelected===true
+      return x.DSMCategoryId===1 && x.level===0 && x.isSelected===false
     }).length;
 
     let count_L_1_R_total = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===1 && x.level===1
+      return x.DSMCategoryId===1 && x.level===1
     }).length;
     let count_L_1_R_selected = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===1 && x.level===1 && x.isSelected===true
+      return x.DSMCategoryId===1 && x.level===1 && x.isSelected===true
     }).length;
 
     let count_L_2_R_total = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===1 && x.level===2
+      return x.DSMCategoryId===1 && x.level===2
     }).length;
     let count_L_2_R_selected = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===1 && x.level===2 && x.isSelected===true
+      return x.DSMCategoryId===1 && x.level===2 && x.isSelected===true
     }).length;
 
     let count_L_3_R_total = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===1 && x.level===3
+      return x.DSMCategoryId===1 && x.level===3
     }).length;
     let count_L_3_R_selected = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===1 && x.level===3 && x.isSelected===true
+      return x.DSMCategoryId===1 && x.level===3 && x.isSelected===true
     }).length;
 
     let count_L_4_R_total = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===1 && x.level===4
+      return x.DSMCategoryId===1 && x.level===4
     }).length;
     let count_L_4_R_selected = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===1 && x.level===4 && x.isSelected===true
+      return x.DSMCategoryId===1 && x.level===4 && x.isSelected===true
     }).length;
 
     let count_L_5_R_total = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===1 && x.level===5
+      return x.DSMCategoryId===1 && x.level===5
     }).length;
     let count_L_5_R_selected = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===1 && x.level===5 && x.isSelected===true
+      return x.DSMCategoryId===1 && x.level===5 && x.isSelected===true
     }).length;
 
     // Content
     let count_L_0_C_total = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===2 && x.level===0
+      return x.DSMCategoryId===2 && x.level===0
     }).length;
     let count_L_0_C_selected = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===2 && x.level===0 && x.isSelected===true
+      return x.DSMCategoryId===2 && x.level===0 && x.isSelected===false
     }).length;
 
     let count_L_1_C_total = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===2 && x.level===1
+      return x.DSMCategoryId===2 && x.level===1
     }).length;
     let count_L_1_C_selected = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===2 && x.level===1 && x.isSelected===true
+      return x.DSMCategoryId===2 && x.level===1 && x.isSelected===true
     }).length;
 
     let count_L_2_C_total = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===2 && x.level===2
+      return x.DSMCategoryId===2 && x.level===2
     }).length;
     let count_L_2_C_selected = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===2 && x.level===2 && x.isSelected===true
+      return x.DSMCategoryId===2 && x.level===2 && x.isSelected===true
     }).length;
 
     let count_L_3_C_total = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===2 && x.level===3
+      return x.DSMCategoryId===2 && x.level===3
     }).length;
     let count_L_3_C_selected = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===2 && x.level===3 && x.isSelected===true
+      return x.DSMCategoryId===2 && x.level===3 && x.isSelected===true
     }).length;
 
     let count_L_4_C_total = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===2 && x.level===4
+      return x.DSMCategoryId===2 && x.level===4
     }).length;
     let count_L_4_C_selected = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===2 && x.level===4 && x.isSelected===true
+      return x.DSMCategoryId===2 && x.level===4 && x.isSelected===true
     }).length;
 
     let count_L_5_C_total = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===2 && x.level===5
+      return x.DSMCategoryId===2 && x.level===5
     }).length;
     let count_L_5_C_selected = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===2 && x.level===5 && x.isSelected===true
+      return x.DSMCategoryId===2 && x.level===5 && x.isSelected===true
     }).length;
     // hosting
     let count_L_0_H_total = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===3 && x.level===0
+      return x.DSMCategoryId===3 && x.level===0
     }).length;
     let count_L_0_H_selected = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===3 && x.level===0 && x.isSelected===true
+      return x.DSMCategoryId===3 && x.level===0 && x.isSelected===false
     }).length;
 
     let count_L_1_H_total = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===3 && x.level===1
+      return x.DSMCategoryId===3 && x.level===1
     }).length;
     let count_L_1_H_selected = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===3 && x.level===1 && x.isSelected===true
+      return x.DSMCategoryId===3 && x.level===1 && x.isSelected===true
     }).length;
 
     let count_L_2_H_total = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===3 && x.level===2
+      return x.DSMCategoryId===3 && x.level===2
     }).length;
     let count_L_2_H_selected = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===3 && x.level===2 && x.isSelected===true
+      return x.DSMCategoryId===3 && x.level===2 && x.isSelected===true
     }).length;
 
     let count_L_3_H_total = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===3 && x.level===3
+      return x.DSMCategoryId===3 && x.level===3
     }).length;
     let count_L_3_H_selected = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===3 && x.level===3 && x.isSelected===true
+      return x.DSMCategoryId===3 && x.level===3 && x.isSelected===true
     }).length;
 
     let count_L_4_H_total = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===3 && x.level===4
+      return x.DSMCategoryId===3 && x.level===4
     }).length;
     let count_L_4_H_selected = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===3 && x.level===4 && x.isSelected===true
+      return x.DSMCategoryId===3 && x.level===4 && x.isSelected===true
     }).length;
 
     let count_L_5_H_total = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===3 && x.level===5
+      return x.DSMCategoryId===3 && x.level===5
     }).length;
     let count_L_5_H_selected = allAnsweredLevels.filter((x:any)=>{
-      return x.DSMCategoryID===3 && x.level===5 && x.isSelected===true
+      return x.DSMCategoryId===3 && x.level===5 && x.isSelected===true
     }).length;
 
- 
 
-    this.userResponseData.push({
-      Level: 'Level 0',
-      PresentationScore:  this.calculationResult(count_L_0_R_selected,count_L_0_R_total),
-      ContentScore: this.calculationResult(count_L_0_C_selected,count_L_0_C_total),
-      Hosting: this.calculationResult(count_L_0_H_selected,count_L_0_H_total),
-      TotalScoreByLevel: this.calculationResult((count_L_0_R_selected+count_L_0_C_selected+count_L_0_H_selected),(count_L_0_R_total+count_L_0_C_total+count_L_0_H_total)),
-    });
+
+    // this.userResponseData.push({
+    //   Level: 'Level 0',
+    //   PresentationScore:  this.calculationResult(count_L_0_R_selected,count_L_0_R_total),
+    //   ContentScore: this.calculationResult(count_L_0_C_selected,count_L_0_C_total),
+    //   Hosting: this.calculationResult(count_L_0_H_selected,count_L_0_H_total),
+    //   TotalScoreByLevel: this.calculationResult((count_L_0_R_selected+count_L_0_C_selected+count_L_0_H_selected),(count_L_0_R_total+count_L_0_C_total+count_L_0_H_total)),
+    // });
 
     this.userResponseData.push({
       Level: 'Level 1',
+      URI:this.baseLevelURI+1,
       PresentationScore: this.calculationResult(count_L_1_R_selected,count_L_1_R_total),
       ContentScore: this.calculationResult(count_L_1_C_selected,count_L_1_C_total),
       Hosting: this.calculationResult(count_L_1_H_selected,count_L_1_H_total),
@@ -342,6 +345,7 @@ export class HomeComponent implements OnInit {
 
     this.userResponseData.push({
       Level: 'Level 2',
+      URI:this.baseLevelURI+2,
       PresentationScore: this.calculationResult(count_L_2_R_selected,count_L_2_R_total),
       ContentScore: this.calculationResult(count_L_2_C_selected,count_L_2_C_total),
       Hosting: this.calculationResult(count_L_2_H_selected,count_L_2_H_total),
@@ -350,6 +354,7 @@ export class HomeComponent implements OnInit {
 
     this.userResponseData.push({
       Level: 'Level 3',
+      URI:this.baseLevelURI+3,
       PresentationScore: this.calculationResult(count_L_3_R_selected,count_L_3_R_total),
       ContentScore: this.calculationResult(count_L_3_C_selected,count_L_3_C_total),
       Hosting: this.calculationResult(count_L_3_H_selected,count_L_3_H_total),
@@ -358,14 +363,16 @@ export class HomeComponent implements OnInit {
 
     this.userResponseData.push({
       Level: 'Level 4',
+      URI:this.baseLevelURI+4,
       PresentationScore: this.calculationResult(count_L_4_R_selected,count_L_4_R_total),
       ContentScore: this.calculationResult(count_L_4_C_selected,count_L_4_C_total),
       Hosting: this.calculationResult(count_L_4_H_selected,count_L_4_H_total),
       TotalScoreByLevel: this.calculationResult((count_L_4_R_selected+count_L_4_C_selected+count_L_4_H_selected),(count_L_4_R_total+count_L_4_C_total+count_L_4_H_total)),
     });
-    
+
     this.userResponseData.push({
       Level: 'Level 5',
+      URI:this.baseLevelURI+5,
       PresentationScore: this.calculationResult(count_L_5_R_selected,count_L_5_R_total),
       ContentScore: this.calculationResult(count_L_5_C_selected,count_L_5_C_total),
       Hosting: this.calculationResult(count_L_5_H_selected,count_L_5_H_total),
@@ -388,7 +395,7 @@ export class HomeComponent implements OnInit {
     else if (sourceTab == 2)
       this.updateTabData(2,data, selectedOption.Id, chekedValue);
     else if (sourceTab == 3)
-      this.updateTabData(3,data, selectedOption.Id, chekedValue); 
+      this.updateTabData(3,data, selectedOption.Id, chekedValue);
   }
 
   updateTabData(sourceTab:number,questionData: QuestionModel,selectedOptionID: number,value: boolean) {
@@ -453,20 +460,22 @@ export class HomeComponent implements OnInit {
       this.isVisibleForDetailedResult = false;
       this.isConfirmLoadingForDetailedResult = false;
     }
-  
+
     handleCancelForDetailedResult(): void {
       this.isVisibleForDetailedResult = false;
     }
 
     detailedResultData: any[] =[];
     detailedResultLevelToFilter = 0;
+
     selectedIndicatorsForDetailedResultLevel = 0;
+    detailedResultLevelURI = "";
     showDetailedResult(dt:any){
       this.isVisibleForDetailedResult = true;
       this.isConfirmLoadingForDetailedResult = true;
       let level =   dt[dt.length-1];
       this.detailedResultLevelToFilter = level;
-
+      this.detailedResultLevelURI = this.baseLevelURI+level+"/";
       this.detailedResultData = [];
 
       let allQuestions = this.appService.appData;
@@ -477,12 +486,14 @@ export class HomeComponent implements OnInit {
               const mValues = allQuestions[i].Options[j].MaturityLevel;
               if(mValues && mValues.includes(dt)){
                 this.detailedResultData.push({
+                  IndicatorId: allQuestions[i].Options[j].IndicatorId,
+                  URI: allQuestions[i].Options[j].URI,
                   IndicatorText: allQuestions[i].Options[j].IndicatorText,
                   Category: allQuestions[i].Options[j].Category,
                   IsSelected: allQuestions[i].Options[j].IsSelected
                   })
               }
-             
+
           }
       }
 

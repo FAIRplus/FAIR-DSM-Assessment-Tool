@@ -1,14 +1,14 @@
 
-      
+
     .app-body {
-      margin: 1% 20% 0% 20%;
+      margin: 1% 15% 0% 15%;
   }
 
     .card-container ::ng-deep p {
       margin: 0;
     }
     .card-container ::ng-deep > .ant-tabs-card .ant-tabs-content {
-      height: 400px;
+      height: 500px;
       margin-top: -16px;
     }
     .card-container ::ng-deep > .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
@@ -20,16 +20,17 @@
     }
     .card-container ::ng-deep > .ant-tabs-card .ant-tabs-tab {
       border-color: transparent;
-      background: #300861;
+      background: #30086170;
       color: #fff;
     }
     .card-container ::ng-deep > .ant-tabs-card .ant-tabs-tab-active {
       border-color: #fff;
       color: #fff !important;
       background: #b43c4a;
+
     }
 
-    
+
     [nz-radio] {
       display: block;
       height: 32px;
@@ -47,7 +48,10 @@
 }
 
 .tab-question-txt {
-margin-bottom: 20px !important;
+  margin-bottom: 15px !important;
+  margin-top: 15px !important;
+  font-weight: bold;
+  font-size: larger;
 }
 
 .options{
@@ -69,4 +73,3 @@ align-items: flex-end;
   }
 
 
-  
