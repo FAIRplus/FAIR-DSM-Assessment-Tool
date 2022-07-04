@@ -16,7 +16,7 @@
               (change)="radioChecked(1, tab1CurrentData, item, $event)"
             />
             <label for="{{ item.IndicatorText }}">
-               {{ item.IndicatorText }}<a href="{{item.URI}}" target="_blank" *ngIf="item.URI"> (link)</a></label
+               {{ item.IndicatorText }}<a href="{{item.URI}}" target="_blank" *ngIf="item.URI"><sup>(?)</sup></a></label
             >
           </ng-container>
 
@@ -27,7 +27,7 @@
               (change)="radioChecked(1, tab1CurrentData, item, $event)"
             />
             <label for="{{ item.IndicatorText }}">
-              {{ item.IndicatorText }}</label
+              {{ item.IndicatorText }}<a href="{{item.URI}}" target="_blank" *ngIf="item.URI"><sup>(?)</sup></a></label
             >
           </ng-container>
         </div>
@@ -48,7 +48,7 @@
               (change)="radioChecked(2, tab2CurrentData, item, $event)"
             />
             <label for="{{ item.IndicatorText }}">
-              {{ item.IndicatorText }}</label
+                {{ item.IndicatorText }}<a href="{{item.URI}}" target="_blank" *ngIf="item.URI"><sup>(?)</sup></a></label
             >
           </ng-container>
 
@@ -59,7 +59,7 @@
               (change)="radioChecked(2, tab2CurrentData, item, $event)"
             />
             <label for="{{ item.IndicatorText }}">
-              {{ item.IndicatorText }}</label
+              {{ item.IndicatorText }}<a href="{{item.URI}}" target="_blank" *ngIf="item.URI"><sup>(?)</sup></a></label
             >
           </ng-container>
         </div>
@@ -83,7 +83,7 @@
               (change)="radioChecked(3, tab3CurrentData, item, $event)"
             />
             <label for="{{ item.IndicatorText }}">
-              {{ item.IndicatorText }}</label
+              {{ item.IndicatorText }}<a href="{{item.URI}}" target="_blank" *ngIf="item.URI"><sup>(?)</sup></a></label
             >
           </ng-container>
 
@@ -94,7 +94,7 @@
               (change)="radioChecked(3, tab3CurrentData, item, $event)"
             />
             <label for="{{ item.IndicatorText }}">
-              {{ item.IndicatorText }}</label
+              {{ item.IndicatorText }}<a href="{{item.URI}}" target="_blank" *ngIf="item.URI"><sup>(?)</sup></a></label
             >
           </ng-container>
         </div>
@@ -141,9 +141,14 @@
   [nzContent]="modalContent"
   [nzFooter]="modalFooter"
   (nzOnCancel)="handleCancel()"
-  [nzWidth]="900"
+  [nzWidth]="1100"
 >
-  <ng-template #modalTitle>FAIRplus-DSM Maturity Result:</ng-template>
+  <ng-template #modalTitle>
+    <p>FAIR-DSM Assessment Result Summary</p>
+    <div>Based on the current assessment, the table below shows the percentage of indicators satisfied towards reaching each level of maturity. </div>
+  </ng-template>
+
+  <ng-template></ng-template>
 
   <ng-template #modalContent>
     <nz-table
@@ -157,17 +162,17 @@
           <th>Representation & Format</th>
           <th>Content & Context</th>
           <th>Hosting Environment Capabilities</th>
-          <th>Total</th>
-          <th>Action</th>
+          <th>Overall Level % Completion </th>
+          <th></th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="text-color-red">
         <tr *ngFor="let data of basicTable.data">
-          <td>{{ data.Level }}</td>
-          <td>{{ data.PresentationScore }}</td>
-          <td>{{ data.ContentScore }}</td>
-          <td>{{ data.Hosting }}</td>
-          <td>{{ data.TotalScoreByLevel }}</td>
+          <td><a href="{{data.URI}}" target="_blank" >{{data.Level}}</a></td>
+          <td>{{ data.PresentationScore }}%</td>
+          <td>{{ data.ContentScore }}%</td>
+          <td>{{ data.Hosting }}%</td>
+          <td>{{ data.TotalScoreByLevel }}%</td>
           <td>
             <button
             nz-button
@@ -201,13 +206,17 @@
   [nzContent]="modalContentForDetailedResult"
   [nzFooter]="modalFooterForDetailedResult"
   (nzOnCancel)="handleCancelForDetailedResult()"
-  [nzWidth]="900"
+  [nzWidth]="1100"
 >
-  <ng-template #modalTitleForDetailedResult>Detailed Assessment For Level {{detailedResultLevelToFilter}} :</ng-template>
+  <ng-template #modalTitleForDetailedResult>
+    <p>The list below shows the indicators required to achieve
+      <a href="{{detailedResultLevelURI}}" target="_blank" >FAIR-DSM Level {{detailedResultLevelToFilter}}</a>
+    </p>
+    <p>Based on this assessment, {{detailedResultData.length - selectedIndicatorsForDetailedResultLevel}} indicators still need to be satisfied for your Datasets to reach Maturity Level {{detailedResultLevelToFilter}}</p>
+  </ng-template>
 
   <ng-template #modalContentForDetailedResult>
     <div style="background: #ECECEC;padding:30px; margin-bottom: 20px;">
-      <p class="tab-question-txt">You have achieved {{selectedIndicatorsForDetailedResultLevel}} points out of {{detailedResultData.length}} for level {{detailedResultLevelToFilter}}</p>
       <div *ngFor="let indicatorData of detailedResultData; let i = index" class="detailed-result-dev" >
         <ng-container>
           <input
@@ -215,7 +224,7 @@
             [checked]="indicatorData.IsSelected" disabled
           />
           <label for="{{ indicatorData.IndicatorText }}" [className]="indicatorData.IsSelected === true ? 'text-color-green' : 'text-color-red'">
-            {{ indicatorData.IndicatorText }}</label
+            <a href="{{indicatorData.URI}}" target="_blank" *ngIf="indicatorData.URI">[{{indicatorData.IndicatorId}}]</a>{{ indicatorData.IndicatorText }}</label
           >
         </ng-container>
     </div>

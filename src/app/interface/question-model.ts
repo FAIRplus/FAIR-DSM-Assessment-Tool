@@ -1,8 +1,8 @@
 
 export interface QuestionModel {
     DSMCategory: string;
-    DSMCategoryID: number;
-    SectioName: string;
+    DSMCategoryId: number;
+    SectionName: string;
     SectionId: number;
     Question: string;
     Options?: (OptionsEntity)[] | null;
@@ -24,9 +24,10 @@ export interface QuestionModel {
 
   export interface UserResponseData {
     Level: string;
+    URI: string;
     PresentationScore: number | string;
     ContentScore: number | string;
     Hosting: number| string;
     TotalScoreByLevel: number| string;
   }
-  
+
