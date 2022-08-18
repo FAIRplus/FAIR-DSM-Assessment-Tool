@@ -18,6 +18,7 @@ import { AntDesignModule } from './ant-design/ant-design.module';
 /*App components*/
 import { HeaderComponent } from './app-header/header.component';
 import { FooterComponent } from './app-footer/footer.component';
+import { PrintDetailComponent } from './print-detail/print-detail.component';
 
 registerLocaleData(en);
 
@@ -25,7 +26,8 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+	PrintDetailComponent
   ],
   imports: [
     BrowserModule,
