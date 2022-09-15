@@ -19,6 +19,7 @@ export interface QuestionModel {
     SubCategory?: string | null;
     URI?: string |null;
     IsSelected: boolean;
+    SuperIndicators: string[] | null;
   }
 
 

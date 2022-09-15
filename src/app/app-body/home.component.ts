@@ -46,7 +46,8 @@ export class HomeComponent implements OnInit {
           "Category": dt.DSMCategory,
           "SubCategory": null,
           "URI": null,
-          "IsSelected": false
+          "IsSelected": false,
+          "SuperIndicators": null
         }
         dt.Options?.push(option);
       }
@@ -186,7 +187,8 @@ export class HomeComponent implements OnInit {
                   allAnsweredLevels.push({
                     DSMCategoryId: allQuestions[i].DSMCategoryId,
                     level: connectedLevels[k],
-                    isSelected: allQuestions[i].Options[j].IsSelected
+                    isSelected: allQuestions[i].Options[j].IsSelected ||
+                      this.checkSuperseded(allQuestions[i].Options,allQuestions[i].Options[j].SuperIndicators)
                   });
               }
             }
@@ -490,17 +492,39 @@ export class HomeComponent implements OnInit {
                   URI: allQuestions[i].Options[j].URI,
                   IndicatorText: allQuestions[i].Options[j].IndicatorText,
                   Category: allQuestions[i].Options[j].Category,
-                  IsSelected: allQuestions[i].Options[j].IsSelected
+                  IsSelected: allQuestions[i].Options[j].IsSelected ||
+                    this.checkSuperseded(allQuestions[i].Options,allQuestions[i].Options[j].SuperIndicators)
                   })
               }
 
           }
       }
 
+
+
+      //iterate over the detailedResultsData and
       this.selectedIndicatorsForDetailedResultLevel = this.detailedResultData.filter((x:any)=>{
         return x.IsSelected===true
       }).length;
-      console.log("this.detailedResultData: ",this.detailedResultData);
+      //console.log("this.detailedResultData: ",this.detailedResultData);
 
     }
+
+    checkSuperseded(qoptions:[], superIndicators:string[]){
+
+      let selected = false;
+
+      if(superIndicators === null)
+        return selected;
+
+      for (let i = 0; i < superIndicators.length; i++) {
+
+        var superIndicator = qoptions.find((obj:OptionsEntity) => {
+          return obj.IndicatorId === superIndicators[i];
+        });
+        // @ts-ignore
+        selected = selected || superIndicator?.IsSelected===true;
+      }
+      return selected;
+  }
 }
