@@ -197,6 +197,14 @@
     >
       OK
     </button>
+	<button
+      nz-button
+      nzType="primary"
+      (click)="print()"
+      [nzLoading]="isConfirmLoading"
+    >
+      Print
+    </button>
   </ng-template>
 </nz-modal>
 

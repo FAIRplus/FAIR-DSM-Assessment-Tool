@@ -6,6 +6,7 @@ import {
   QuestionModel,
   UserResponseData,
 } from '../interface/question-model';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-home',
@@ -27,7 +28,7 @@ export class HomeComponent implements OnInit {
 
   baseLevelURI = "https://fairplus.github.io/Data-Maturity/docs/Levels/Level";
 
-  constructor(private appService: AppService) {}
+  constructor(private appService: AppService, private router: Router) {}
 
   ngOnInit(): void {
     this.loadTabData();
@@ -472,10 +473,8 @@ export class HomeComponent implements OnInit {
 
     selectedIndicatorsForDetailedResultLevel = 0;
     detailedResultLevelURI = "";
-    showDetailedResult(dt:any){
-      this.isVisibleForDetailedResult = true;
-      this.isConfirmLoadingForDetailedResult = true;
-      let level =   dt[dt.length-1];
+	calcDetailedResult(dt:any):any{
+	  let level =   dt[dt.length-1];
       this.detailedResultLevelToFilter = level;
       this.detailedResultLevelURI = this.baseLevelURI+level+"/";
       this.detailedResultData = [];
@@ -506,8 +505,25 @@ export class HomeComponent implements OnInit {
       this.selectedIndicatorsForDetailedResultLevel = this.detailedResultData.filter((x:any)=>{
         return x.IsSelected===true
       }).length;
-      //console.log("this.detailedResultData: ",this.detailedResultData);
-
+      console.log("this.detailedResultData: ",this.detailedResultData);
+	  return {
+		selectedIndicatorsForDetailedResultLevel: this.selectedIndicatorsForDetailedResultLevel,
+        detailedResultLevelToFilter: this.detailedResultLevelToFilter,
+        detailedResultData: this.detailedResultData
+      }
+    }
+	showDetailedResult(dt:any){
+      this.isVisibleForDetailedResult = true;
+      this.isConfirmLoadingForDetailedResult = true;
+	  this.calcDetailedResult(dt);
+	}
+	async print(){
+      const data={userResponseData:this.userResponseData,details:[]};      
+	  for(const d of this.userResponseData){
+              const detail = JSON.parse(JSON.stringify(this.calcDetailedResult(d.Level)));
+			  (data.details as any).push(detail as any)
+      }
+      await this.router.navigateByUrl('/print', { state: {data}});
     }
 
     checkSuperseded(qoptions:[], superIndicators:string[]){
@@ -528,3 +544,4 @@ export class HomeComponent implements OnInit {
       return selected;
   }
 }
+
