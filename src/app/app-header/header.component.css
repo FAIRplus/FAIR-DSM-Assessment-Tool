@@ -1,10 +1,13 @@
 
 .app-header {
     height: 60px;
- 
+
 }
 
+.h1{
+  color: #1b3157;
+}
 .header-img{
     height: 60px;
-    margin: 0% 20%;
+    margin: 0% 9%;
 }

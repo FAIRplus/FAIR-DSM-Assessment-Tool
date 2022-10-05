@@ -518,7 +518,7 @@ export class HomeComponent implements OnInit {
 	  this.calcDetailedResult(dt);
 	}
 	async print(){
-      const data={userResponseData:this.userResponseData,details:[]};      
+      const data={userResponseData:this.userResponseData,details:[]};
 	  for(const d of this.userResponseData){
               const detail = JSON.parse(JSON.stringify(this.calcDetailedResult(d.Level)));
 			  (data.details as any).push(detail as any)

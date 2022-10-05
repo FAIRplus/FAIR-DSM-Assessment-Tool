@@ -2,9 +2,12 @@
   <div class="card-container">
     <nz-tabset nzType="card">
       <nz-tab nzTitle="Representation & Format" (nzClick)="tabClicked(1)">
+
         <p class="tab-question-txt">
+          [ {{tab1CurrentData.SectionId}} of {{tab1Data.length+tab2Data.length+tab3Data.length}}  ]
           {{ tab1CurrentData ? tab1CurrentData.Question : "" }}
         </p>
+        <nz-divider></nz-divider>
         <div
           *ngFor="let item of tab1CurrentData.Options; let i = index"
           class="options"
@@ -33,10 +36,12 @@
         </div>
       </nz-tab>
 
-      <nz-tab nzTitle="Content & Context" (nzClick)="tabClicked(2)">
+      <nz-tab nzTitle="Content & Context" (nzClick)="tabClicked(2)" >
         <p class="tab-question-txt">
+          [ {{tab2CurrentData.SectionId}} of {{tab1Data.length+tab2Data.length+tab3Data.length}}  ]
           {{ tab2CurrentData ? tab2CurrentData.Question : "" }}
         </p>
+        <nz-divider></nz-divider>
         <div
           *ngFor="let item of tab2CurrentData.Options; let i = index"
           class="options"
@@ -65,13 +70,12 @@
         </div>
       </nz-tab>
 
-      <nz-tab
-        nzTitle="Hosting Environment Capabilities"
-        (nzClick)="tabClicked(3)"
-      >
+      <nz-tab nzTitle="Hosting Environment Capabilities" (nzClick)="tabClicked(3)">
         <p class="tab-question-txt">
+          [ {{tab3CurrentData.SectionId}} of {{tab1Data.length+tab2Data.length+tab3Data.length}} ]
           {{ tab3CurrentData ? tab3CurrentData.Question : "" }}
         </p>
+        <nz-divider></nz-divider>
         <div
           *ngFor="let item of tab3CurrentData.Options; let i = index"
           class="options"
@@ -88,6 +92,7 @@
           </ng-container>
 
           <ng-container *ngIf="tab3CurrentData.MultipleAllowed">
+
             <input
               type="checkbox"
               [checked]="item.IsSelected"
@@ -169,10 +174,10 @@
       <tbody class="text-color-red">
         <tr *ngFor="let data of basicTable.data">
           <td><a href="{{data.URI}}" target="_blank" >{{data.Level}}</a></td>
-          <td>{{ data.PresentationScore }}%</td>
-          <td>{{ data.ContentScore }}%</td>
-          <td>{{ data.Hosting }}%</td>
-          <td>{{ data.TotalScoreByLevel }}%</td>
+          <td [className]="data.PresentationScore === 100 ? 'text-color-green' : 'text-color-red'">{{ data.PresentationScore }}%</td>
+          <td [className]="data.ContentScore === 100 ? 'text-color-green' : 'text-color-red'">{{ data.ContentScore }}%</td>
+          <td [className]="data.Hosting === 100 ? 'text-color-green' : 'text-color-red'">{{ data.Hosting }}%</td>
+          <td [className]="data.TotalScoreByLevel === 100 ? 'text-color-green' : 'text-color-red'">{{ data.TotalScoreByLevel }}%</td>
           <td>
             <button
             nz-button

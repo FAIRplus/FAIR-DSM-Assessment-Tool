@@ -1,14 +1,14 @@
 
 
     .app-body {
-      margin: 1% 15% 0% 15%;
+      margin: 1% 9% 0% 9%;
   }
 
     .card-container ::ng-deep p {
       margin: 0;
     }
     .card-container ::ng-deep > .ant-tabs-card .ant-tabs-content {
-      height: 500px;
+      height: 400px;
       margin-top: -16px;
     }
     .card-container ::ng-deep > .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
@@ -20,13 +20,13 @@
     }
     .card-container ::ng-deep > .ant-tabs-card .ant-tabs-tab {
       border-color: transparent;
-      background: #30086170;
-      color: #fff;
+      background: rgba(27, 49, 87, 0.8);
+      color: #aaa7a7;
     }
     .card-container ::ng-deep > .ant-tabs-card .ant-tabs-tab-active {
       border-color: #fff;
       color: #fff !important;
-      background: #b43c4a;
+      background: #1b3157;
 
     }
 
@@ -35,6 +35,7 @@
       display: block;
       height: 32px;
       line-height: 32px;
+
     }
 
 
@@ -52,6 +53,7 @@
   margin-top: 15px !important;
   font-weight: bold;
   font-size: larger;
+  color: darkorange;
 }
 
 .options{
