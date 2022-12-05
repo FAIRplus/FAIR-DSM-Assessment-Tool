@@ -9,6 +9,7 @@ export interface QuestionModel {
     MultipleAllowed: boolean;
     NoneOfAboveAllowed: boolean;
     IsAnswered: boolean;
+    Image: string;
   }
   export interface OptionsEntity {
     Id: number;
@@ -20,6 +21,7 @@ export interface QuestionModel {
     URI?: string |null;
     IsSelected: boolean;
     SuperIndicators: string[] | null;
+    SkipQuestionIDs ?: string[] | null;
   }
 
 

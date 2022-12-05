@@ -7,6 +7,7 @@
     "Question": "Which of the following statements best describes the current state of Data?",
     "MultipleAllowed": false,
     "NoneOfAboveAllowed": false,
+    "Image":"../../assets/app-image/conceptual-model.png",
     "Options": [
       {
         "Id": 1,
@@ -17,7 +18,8 @@
         "SubCategory": "Dataset Representation (DR)",
         "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-0-r2",
         "IsSelected": false,
-        "SuperIndicators": null
+        "SuperIndicators": null,
+        "SkipQuestionIDs": [2, 3, 9]
       },
       {
         "Id": 2,
@@ -28,7 +30,8 @@
         "SubCategory": "Dataset Representation (DR)",
         "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-r2",
         "IsSelected": false,
-        "SuperIndicators": null
+        "SuperIndicators": null,
+        "SkipQuestionIDs": [4, 5]
       }
     ]
   },
@@ -40,6 +43,7 @@
     "Question": "Which of the following statements best describe how your data is currently represented?",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": true,
+    "Image":"../../assets/app-image/conceptual-model.png",
     "Options": [
       {
         "Id": 1,
@@ -97,6 +101,7 @@
     "Question": "Which of the following statements best describes the current state of the Dataset\u0027s Metadata?",
     "MultipleAllowed": false,
     "NoneOfAboveAllowed": false,
+    "Image":"../../assets/app-image/conceptual-model.png",
     "Options": [
       {
         "Id": 1,
@@ -118,7 +123,8 @@
         "SubCategory": "Dataset Metadata Representation",
         "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-r0",
         "IsSelected": false,
-        "SuperIndicators": null
+        "SuperIndicators": null,
+        "SkipQuestionIDs": [5]
       }
     ]
   },
@@ -130,6 +136,7 @@
     "Question": "Which of the following statements best describes how the Dataset\u0027s metadata is represented?",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": true,
+    "Image":"../../assets/app-image/conceptual-model.png",
     "Options": [
       {
         "Id": 1,
@@ -201,6 +208,7 @@
     "Question": "The following statements refer to the representation of Contextual Metadata that is necessary to understand and interpret Datasets\u0027 content. Which of the following statements best describes how information describing the context surrounding the dataset(s) is represented?",
     "MultipleAllowed": false,
     "NoneOfAboveAllowed": false,
+    "Image":"../../assets/app-image/conceptual-model.png",
     "Options": [
       {
         "Id": 1,
@@ -283,6 +291,7 @@
     "Question": "Which of the following statements best describes the current format of the Dataset Metadata?",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": false,
+    "Image":"../../assets/app-image/conceptual-model.png",
     "Options": [
       {
         "Id": 1,
@@ -354,6 +363,7 @@
     "Question": "Which of the following statements best describes the current data format?",
     "MultipleAllowed": false,
     "NoneOfAboveAllowed": false,
+    "Image":"../../assets/app-image/conceptual-model.png",
     "Options": [
       {
         "Id": 1,
@@ -414,6 +424,7 @@
     "Question": "The following statements refer to the \u0022Data Content\u0022 reported in a Dataset that is designed and purposed for FAIR sharing. Select all that apply.",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": false,
+    "Image":"../../assets/app-image/conceptual-model.png",
     "Options": [
       {
         "Id": 1,
@@ -480,6 +491,7 @@
     "Question": "The following statements refer to the Dataset Fields contained in a Dataset. Select all that apply.",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": true,
+    "Image":"../../assets/app-image/conceptual-model.png",
     "Options": [
       {
         "Id": 1,
@@ -535,6 +547,7 @@
     "Question": "The following statements refer to the data values (measurements) recorded for each variable reported by a Dataset Field. Select all that apply.",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": true,
+    "Image":"../../assets/app-image/conceptual-model.png",
     "Options": [
       {
         "Id": 1,
@@ -590,6 +603,7 @@
     "Question": "The following statemets refer to the metadata reported about the study/project related context surrounding the datasets. Select all that apply.",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": false,
+    "Image":"../../assets/app-image/conceptual-model.png",
     "Options": [
       {
         "Id": 1,
@@ -656,6 +670,7 @@
     "Question": "The following statements refer to different metatadata content reported in a Dataset\u0027s Descriptor. Select all that apply.",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": false,
+    "Image":"../../assets/app-image/conceptual-model.png",
     "Options": [
       {
         "Id": 1,
@@ -722,6 +737,7 @@
     "Question": "The following statements refer to field-level metadata. Select all that apply. (None is an option)",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": true,
+    "Image":"../../assets/app-image/conceptual-model.png",
     "Options": [
       {
         "Id": 1,
@@ -766,6 +782,7 @@
     "Question": "The following statements refer to value-level metadata. Select all that apply. (None is an option)",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": true,
+    "Image":"../../assets/app-image/conceptual-model.png",
     "Options": [
       {
         "Id": 1,
@@ -799,6 +816,7 @@
     "Question": "The following statements refer to the Storage Capabilities of the Data and Metadata Hosting Environments. Select all that apply.",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": false,
+    "Image":"../../assets/app-image/conceptual-model.png",
     "Options": [
       {
         "Id": 1,
@@ -865,6 +883,7 @@
     "Question": "The following statements refer to the Retrieval Capabilities of the Data and Metadata Hosting Environments. Select all that apply.",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": false,
+    "Image":"../../assets/app-image/conceptual-model.png",
     "Options": [
       {
         "Id": 1,
@@ -953,6 +972,7 @@
     "Question": "The following statements refer to the Search Capabilities of the Data and Metadata Hosting Environments. Select all that apply.",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": false,
+    "Image":"../../assets/app-image/conceptual-model.png",
     "Options": [
       {
         "Id": 1,
