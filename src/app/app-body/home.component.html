@@ -1,13 +1,26 @@
 <div class="app-body">
   <div class="card-container">
-    <nz-tabset nzType="card">
-      <nz-tab nzTitle="Representation & Format" (nzClick)="tabClicked(1)">
+    <nz-tabset [(nzSelectedIndex)]="currentSelectedTab" nzType="card" >
+      <nz-tab  nzTitle="Representation & Format"  >
 
         <p class="tab-question-txt">
-          [ {{tab1CurrentData.SectionId}} of {{tab1Data.length+tab2Data.length+tab3Data.length}}  ]
+          [{{tab1CurrentData.SectionId}} of {{tab1Data.length+tab2Data.length+tab3Data.length}}]
           {{ tab1CurrentData ? tab1CurrentData.Question : "" }}
         </p>
         <nz-divider></nz-divider>
+        <!-- position of the label 
+                <label class="tab-question-img-header">
+          {{ tab1CurrentData ? tab1CurrentData.SectionName : "" }}
+        </label>
+      -->
+        <div>
+          <label class="tab-question-img-header"> {{ tab1CurrentData ? tab1CurrentData.SectionName : "" }} </label>
+          <img class="tab-question-img"
+            [src]="tab1CurrentData.Image"
+            [title]="tab1CurrentData.SectionName"
+          />
+        </div>
+
         <div
           *ngFor="let item of tab1CurrentData.Options; let i = index"
           class="options"
@@ -36,12 +49,21 @@
         </div>
       </nz-tab>
 
-      <nz-tab nzTitle="Content & Context" (nzClick)="tabClicked(2)" >
+      <nz-tab nzTitle="Content & Context"    >
         <p class="tab-question-txt">
           [ {{tab2CurrentData.SectionId}} of {{tab1Data.length+tab2Data.length+tab3Data.length}}  ]
           {{ tab2CurrentData ? tab2CurrentData.Question : "" }}
         </p>
         <nz-divider></nz-divider>
+
+        <div>
+          <label class="tab-question-img-header"> {{ tab1CurrentData ? tab1CurrentData.SectionName : "" }} </label>
+          <img class="tab-question-img"
+            [src]="tab1CurrentData.Image"
+            [title]="tab1CurrentData.SectionName"
+          />
+        </div>
+
         <div
           *ngFor="let item of tab2CurrentData.Options; let i = index"
           class="options"
@@ -70,12 +92,21 @@
         </div>
       </nz-tab>
 
-      <nz-tab nzTitle="Hosting Environment Capabilities" (nzClick)="tabClicked(3)">
+      <nz-tab   nzTitle="Hosting Environment Capabilities" >
         <p class="tab-question-txt">
           [ {{tab3CurrentData.SectionId}} of {{tab1Data.length+tab2Data.length+tab3Data.length}} ]
           {{ tab3CurrentData ? tab3CurrentData.Question : "" }}
         </p>
         <nz-divider></nz-divider>
+        
+        <div>
+          <label class="tab-question-img-header"> {{ tab1CurrentData ? tab1CurrentData.SectionName : "" }} </label>
+          <img class="tab-question-img"
+            [src]="tab1CurrentData.Image"
+            [title]="tab1CurrentData.SectionName"
+          />
+        </div>
+
         <div
           *ngFor="let item of tab3CurrentData.Options; let i = index"
           class="options"

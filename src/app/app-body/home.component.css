@@ -40,10 +40,6 @@
 
 
 
-
-
-
-
 .submit-btn {
   float: right;
 }
@@ -55,6 +51,28 @@
   font-size: larger;
   color: darkorange;
 }
+
+.tab-question-img {
+  width: 500px !important;
+  float: right;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+
+}
+
+.tab-question-img-header {
+  text-align: end;
+  position: relative;
+  font-size: larger;
+  font-weight: bold;
+  top: -20px;
+  right: -500px;
+  transform: translate(-50%, -50%);
+  color: darkblue;
+  }
+
 
 .options{
 margin-bottom: 10px !important;
