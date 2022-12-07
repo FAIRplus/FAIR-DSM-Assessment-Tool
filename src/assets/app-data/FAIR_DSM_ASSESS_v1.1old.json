@@ -2,30 +2,31 @@
   {
     "DSMCategory": "[R] Representation and format",
     "DSMCategoryId": 1,
-    "SectionName": "Dataset Representation",
+    "SectionName": "Dataset Representation (DR)",
     "SectionId": "1",
-    "Question": "Which of the following statements best describes the current state of Data to be shared and re-used?",
+    "Question": "Which of the following statements best describes the current state of Data?",
     "MultipleAllowed": false,
     "NoneOfAboveAllowed": false,
     "Options": [
       {
         "Id": 1,
         "IndicatorId": "DSM-0-R2",
-        "IndicatorText": "No representation of Data purposed for sharing and re-use is available",
+        "IndicatorText": "No representation of Data purposed for FAIR sharing is available",
         "MaturityLevel": "Level 0",
         "Category": "[R] Representation and format",
-        "SubCategory": "Dataset Representation",
+        "SubCategory": "Dataset Representation (DR)",
         "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-0-r2",
         "IsSelected": false,
-        "SuperIndicators": null
+        "SuperIndicators": null,
+        "SKIPPED": [2,3,4]
       },
       {
         "Id": 2,
         "IndicatorId": "DSM-1-R2",
-        "IndicatorText": "Data intended for sharing and reuse have a purposely defined representation as Datasets",
+        "IndicatorText": "Structured and/or Unstructured Data are organised into Dataset(s) created for the purpose of FAIR sharing",
         "MaturityLevel": "Level 1, Level 2, Level 3, Level 4",
         "Category": "[R] Representation and format",
-        "SubCategory": "Dataset Representation",
+        "SubCategory": "Dataset Representation (DR)",
         "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-r2",
         "IsSelected": false,
         "SuperIndicators": null
@@ -35,19 +36,19 @@
   {
     "DSMCategory": "[R] Representation and format",
     "DSMCategoryId": 1,
-    "SectionName": "Dataset Representation",
+    "SectionName": "Dataset Representation (DR)",
     "SectionId": "2",
-    "Question": "Which of the following statements best describe the state of your shareable Datasets?",
+    "Question": "Which of the following statements best describe how your data is currently represented?",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": true,
     "Options": [
       {
         "Id": 1,
         "IndicatorId": "DSM-2-R2",
-        "IndicatorText": "Dataset(s) are standardised to a locally defined Dataset Model suitable for data sharing and re-use",
+        "IndicatorText": "Project collected Data are organized into structured Dataset(s) and conform to a locally defined Dataset Model",
         "MaturityLevel": "Level 2",
         "Category": "[R] Representation and format",
-        "SubCategory": "Dataset Representation",
+        "SubCategory": "Dataset Representation (DR)",
         "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-2-r2",
         "IsSelected": false,
         "SuperIndicators": [
@@ -57,10 +58,10 @@
       {
         "Id": 2,
         "IndicatorId": "DSM-3-R2",
-        "IndicatorText": "Dataset(s) are standardised to relevant Domain or Community Standard Dataset Model(s) suitable for data sharing and re-use",
+        "IndicatorText": "Structured Data are represented as Datasets and conform to relevant Standard Dataset Model(s) for FAIR sharing",
         "MaturityLevel": "Level 3",
         "Category": "[R] Representation and format",
-        "SubCategory": "Dataset Representation",
+        "SubCategory": "Dataset Representation (DR)",
         "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-r2",
         "IsSelected": false,
         "SuperIndicators": null
@@ -68,10 +69,10 @@
       {
         "Id": 3,
         "IndicatorId": "DSM-4-R2",
-        "IndicatorText": "Dataset(s) are standardised to a defined Semantic Data Model and represented using Linked Data Represetations suitable for data sharing and re-use",
+        "IndicatorText": "Dataset(s) content is semantically represented using Linked Data Represetations conforming to a Semantic Data Model",
         "MaturityLevel": "Level 4",
         "Category": "[R] Representation and format",
-        "SubCategory": "Dataset Representation",
+        "SubCategory": "Dataset Representation (DR)",
         "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-4-r2",
         "IsSelected": false,
         "SuperIndicators": null
@@ -79,10 +80,10 @@
       {
         "Id": 4,
         "IndicatorId": "DSM-5-R2",
-        "IndicatorText": "Dataset(s) intended for sharing and re-use are granularly standardised and managed at the Data Element Level (e.g. ISO 11179 MDR standard)",
+        "IndicatorText": "Dataset(s) are granularly represented and managed at the Data Element Level (e.g. ISO 11179 MDR standard)",
         "MaturityLevel": "Level 5",
         "Category": "[R] Representation and format",
-        "SubCategory": "Dataset Representation",
+        "SubCategory": "Dataset Representation (DR)",
         "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-5-r2",
         "IsSelected": false,
         "SuperIndicators": null
@@ -92,68 +93,8 @@
   {
     "DSMCategory": "[R] Representation and format",
     "DSMCategoryId": 1,
-    "SectionName": "Dataset Format",
-    "SectionId": "3",
-    "Question": "Which of the following statements best describes the Dataset\u0027s current format ?",
-    "MultipleAllowed": false,
-    "NoneOfAboveAllowed": false,
-    "Options": [
-      {
-        "Id": 1,
-        "IndicatorId": "DSM-0-R5",
-        "IndicatorText": "Dataset(s) are NOT available in a Machine Readable Format",
-        "MaturityLevel": "Level 0",
-        "Category": "[R] Representation and format",
-        "SubCategory": "Dataset Format",
-        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-0-r5",
-        "IsSelected": false,
-        "SuperIndicators": null
-      },
-      {
-        "Id": 2,
-        "IndicatorId": "DSM-1-R5",
-        "IndicatorText": "Dataset(s) available in Machine Readable Format ",
-        "MaturityLevel": "Level 1, Level 2",
-        "Category": "[R] Representation and format",
-        "SubCategory": "Dataset Format",
-        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-r5",
-        "IsSelected": false,
-        "SuperIndicators": [
-          "DSM-3-R5",
-          "DSM-4-R5"
-        ]
-      },
-      {
-        "Id": 3,
-        "IndicatorId": "DSM-3-R5",
-        "IndicatorText": "Dataset(s) available in non-proprietary Machine Readable Format as prescribed by a standard Dataset Model",
-        "MaturityLevel": "Level 3",
-        "Category": "[R] Representation and format",
-        "SubCategory": "Dataset Format",
-        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-r5",
-        "IsSelected": false,
-        "SuperIndicators": [
-          "DSM-4-R5"
-        ]
-      },
-      {
-        "Id": 4,
-        "IndicatorId": "DSM-4-R5",
-        "IndicatorText": "Datasets are available in a Machine Readable and Machine Interpretable format",
-        "MaturityLevel": "Level 4",
-        "Category": "[R] Representation and format",
-        "SubCategory": "Dataset Format",
-        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-4-r5",
-        "IsSelected": false,
-        "SuperIndicators": null
-      }
-    ]
-  },
-  {
-    "DSMCategory": "[R] Representation and format",
-    "DSMCategoryId": 1,
     "SectionName": "Dataset Metadata Representation",
-    "SectionId": "4",
+    "SectionId": "3",
     "Question": "Which of the following statements best describes the current state of the Dataset\u0027s Metadata?",
     "MultipleAllowed": false,
     "NoneOfAboveAllowed": false,
@@ -161,7 +102,7 @@
       {
         "Id": 1,
         "IndicatorId": "DSM-0-R3",
-        "IndicatorText": "Metadata is available but NOT formally represented in a structured Dataset Descriptor ",
+        "IndicatorText": "Dataset Metadata is NOT formally represented in a structured Dataset Descriptor ",
         "MaturityLevel": "Level 0",
         "Category": "[R] Representation and format",
         "SubCategory": "Dataset Metadata Representation",
@@ -186,8 +127,8 @@
     "DSMCategory": "[R] Representation and format",
     "DSMCategoryId": 1,
     "SectionName": "Dataset Metadata Representation",
-    "SectionId": "5",
-    "Question": "Which of the following statements best describes how the Dataset\u0027s metadata is modeled and represented?",
+    "SectionId": "4",
+    "Question": "Which of the following statements best describes how the Dataset\u0027s metadata is represented?",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": true,
     "Options": [
@@ -208,7 +149,7 @@
       {
         "Id": 2,
         "IndicatorId": "DSM-2-R3",
-        "IndicatorText": "Dataset Descriptor(s) adopt a Metadata Schema representation that describes the locally defined Dataset Model including its structural metadata (i.e. Field-level and Value-level metadata)",
+        "IndicatorText": "Dataset Descriptor(s) conforms to or extends a Standard Generic Dataset Descriptor Model to describe and represent structural metadata of Dataset(s)",
         "MaturityLevel": "Level 2",
         "Category": "[R] Representation and format",
         "SubCategory": "Dataset Metadata Representation",
@@ -256,6 +197,88 @@
   {
     "DSMCategory": "[R] Representation and format",
     "DSMCategoryId": 1,
+    "SectionName": "Contextual Metadata Representation",
+    "SectionId": "5",
+    "Question": "The following statements refer to the representation of Contextual Metadata that is necessary to understand and interpret Datasets\u0027 content. Which of the following statements best describes how information describing the context surrounding the dataset(s) is represented?",
+    "MultipleAllowed": false,
+    "NoneOfAboveAllowed": false,
+    "Options": [
+      {
+        "Id": 1,
+        "IndicatorId": "DSM-0-R1",
+        "IndicatorText": "Contextual Metadata is NOT formally represented in any form ",
+        "MaturityLevel": "Level 0",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Contextual Metadata Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-0-r1",
+        "IsSelected": false,
+        "SuperIndicators": null
+      },
+      {
+        "Id": 2,
+        "IndicatorId": "DSM-1-R1",
+        "IndicatorText": "Contextual Metadata is reported at summary level and represented in the Dataset Descriptor",
+        "MaturityLevel": "Level 1",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Contextual Metadata Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-r1",
+        "IsSelected": false,
+        "SuperIndicators": [
+          "DSM-2-R1",
+          "DSM-3-R1"
+        ]
+      },
+      {
+        "Id": 3,
+        "IndicatorId": "DSM-2-R1",
+        "IndicatorText": "Contextual Metadata is formally represented in the form of a locally defined Domain Model",
+        "MaturityLevel": "Level 2",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Contextual Metadata Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-2-r1",
+        "IsSelected": false,
+        "SuperIndicators": [
+          "DSM-3-R1"
+        ]
+      },
+      {
+        "Id": 4,
+        "IndicatorId": "DSM-3-R1",
+        "IndicatorText": "Contextual Metadata is formally represented and conforms to a standard defined Domain Model if available",
+        "MaturityLevel": "Level 3",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Contextual Metadata Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-r1",
+        "IsSelected": false,
+        "SuperIndicators": null
+      },
+      {
+        "Id": 5,
+        "IndicatorId": "DSM-4-R1",
+        "IndicatorText": "Contextual Metadata is formally represented by a defined set of Common Data Elements",
+        "MaturityLevel": "Level 4",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Contextual Metadata Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-4-r1",
+        "IsSelected": false,
+        "SuperIndicators": null
+      },
+      {
+        "Id": 6,
+        "IndicatorId": "DSM-5-R1",
+        "IndicatorText": "Domain entities are represented by Managed Master Data Objects conforming to a Master Data Model used for data consolidation",
+        "MaturityLevel": "Level 5",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Contextual Metadata Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-5-r1",
+        "IsSelected": false,
+        "SuperIndicators": null
+      }
+    ]
+  },
+  {
+    "DSMCategory": "[R] Representation and format",
+    "DSMCategoryId": 1,
     "SectionName": "Metadata Format",
     "SectionId": "6",
     "Question": "Which of the following statements best describes the current format of the Dataset Metadata?",
@@ -265,7 +288,7 @@
       {
         "Id": 1,
         "IndicatorId": "DSM-0-R4",
-        "IndicatorText": "Metadata is NOT available in a Machine Readable Format",
+        "IndicatorText": "Dataset Descriptor (metadata) is NOT available in a Machine Readable Format",
         "MaturityLevel": "Level 0",
         "Category": "[R] Representation and format",
         "SubCategory": "Metadata Format",
@@ -290,7 +313,7 @@
       {
         "Id": 3,
         "IndicatorId": "DSM-2-R4",
-        "IndicatorText": "A formal documentation of the locally defined Domain Model is available in a Human Readable Format",
+        "IndicatorText": "Contextual Metadata represented in the form of a Domain Model is available in a Human Readable Format",
         "MaturityLevel": "Level 2, Level 3",
         "Category": "[R] Representation and format",
         "SubCategory": "Metadata Format",
@@ -327,80 +350,58 @@
   {
     "DSMCategory": "[R] Representation and format",
     "DSMCategoryId": 1,
-    "SectionName": "Contextual Metadata Representation",
+    "SectionName": "Dataset Format",
     "SectionId": "7",
-    "Question": "Which of the following statements best describes how information describing the context of the dataset(s) is represented?",
+    "Question": "Which of the following statements best describes the current data format?",
     "MultipleAllowed": false,
     "NoneOfAboveAllowed": false,
     "Options": [
       {
         "Id": 1,
-        "IndicatorId": "DSM-0-R1",
-        "IndicatorText": "Contextual Metadata is NOT formally represented in any form ",
+        "IndicatorId": "DSM-0-R5",
+        "IndicatorText": "Dataset(s) are NOT available in a Machine Readable Format",
         "MaturityLevel": "Level 0",
         "Category": "[R] Representation and format",
-        "SubCategory": "Contextual Metadata Representation",
-        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-0-r1",
+        "SubCategory": "Dataset Format",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-0-r5",
         "IsSelected": false,
         "SuperIndicators": null
       },
       {
         "Id": 2,
-        "IndicatorId": "DSM-1-R1",
-        "IndicatorText": "Contextual Metadata is represented at summary level and reported in the Dataset Descriptor",
-        "MaturityLevel": "Level 1",
+        "IndicatorId": "DSM-1-R5",
+        "IndicatorText": "Dataset(s) available in Machine Readable Format ",
+        "MaturityLevel": "Level 1, Level 2",
         "Category": "[R] Representation and format",
-        "SubCategory": "Contextual Metadata Representation",
-        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-r1",
+        "SubCategory": "Dataset Format",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-r5",
         "IsSelected": false,
         "SuperIndicators": [
-          "DSM-2-R1",
-          "DSM-3-R1"
+          "DSM-3-R5",
+          "DSM-4-R5"
         ]
       },
       {
         "Id": 3,
-        "IndicatorId": "DSM-2-R1",
-        "IndicatorText": "Contextual Metadata is formally represented and reported in the form of a locally defined Domain Model",
-        "MaturityLevel": "Level 2",
+        "IndicatorId": "DSM-3-R5",
+        "IndicatorText": "If applicable, Dataset(s) available in non-proprietary Machine Readable Format relevant to the adopted standard Dataset Model",
+        "MaturityLevel": "Level 3",
         "Category": "[R] Representation and format",
-        "SubCategory": "Contextual Metadata Representation",
-        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-2-r1",
+        "SubCategory": "Dataset Format",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-r5",
         "IsSelected": false,
         "SuperIndicators": [
-          "DSM-3-R1"
+          "DSM-4-R5"
         ]
       },
       {
         "Id": 4,
-        "IndicatorId": "DSM-3-R1",
-        "IndicatorText": "Contextual Metadata is formally represented and modeled according to a community or domain-specific standard",
-        "MaturityLevel": "Level 3",
-        "Category": "[R] Representation and format",
-        "SubCategory": "Contextual Metadata Representation",
-        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-r1",
-        "IsSelected": false,
-        "SuperIndicators": null
-      },
-      {
-        "Id": 5,
-        "IndicatorId": "DSM-4-R1",
-        "IndicatorText": "Contextual Metadata is formally represented by a set of semantically defined Common Data Elements",
+        "IndicatorId": "DSM-4-R5",
+        "IndicatorText": "Datasets are available in a Machine Readable and Machine Interpretable format",
         "MaturityLevel": "Level 4",
         "Category": "[R] Representation and format",
-        "SubCategory": "Contextual Metadata Representation",
-        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-4-r1",
-        "IsSelected": false,
-        "SuperIndicators": null
-      },
-      {
-        "Id": 6,
-        "IndicatorId": "DSM-5-R1",
-        "IndicatorText": "Data content and context is defined and managed by Master Data Management",
-        "MaturityLevel": "Level 5",
-        "Category": "[R] Representation and format",
-        "SubCategory": "Contextual Metadata Representation",
-        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-5-r1",
+        "SubCategory": "Dataset Format",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-4-r5",
         "IsSelected": false,
         "SuperIndicators": null
       }
@@ -411,7 +412,7 @@
     "DSMCategoryId": 2,
     "SectionName": "Dataset Identification",
     "SectionId": "8",
-    "Question": "The following statements refer to Dataset-Level content. Select all that apply.",
+    "Question": "The following statements refer to the \u0022Data Content\u0022 reported in a Dataset that is designed and purposed for FAIR sharing. Select all that apply.",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": false,
     "Options": [
@@ -429,7 +430,7 @@
       {
         "Id": 2,
         "IndicatorId": "DSM-1-C0",
-        "IndicatorText": "Each Dataset purposed for sharing and re-use is assigned a unique identifier",
+        "IndicatorText": "Each Dataset purposed for FAIR sharing is assigned a unique identifier",
         "MaturityLevel": "Level 1",
         "Category": "[C] Content \u0026 Context",
         "SubCategory": "Dataset Identification",
@@ -441,7 +442,7 @@
         "Id": 3,
         "IndicatorId": "DSM-2-C2",
         "IndicatorText": "Where applicable, data is structured in the Dataset according to the Tidy Data Principles",
-        "MaturityLevel": "Level 2, Level 3",
+        "MaturityLevel": "Level 2",
         "Category": "[C] Content \u0026 Context",
         "SubCategory": "Dataset Content",
         "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-2-c2",
@@ -477,7 +478,7 @@
     "DSMCategoryId": 2,
     "SectionName": "Dataset Content",
     "SectionId": "9",
-    "Question": "The following statements refer to Field-Level content reported in a Dataset. Select all that apply.\t",
+    "Question": "The following statements refer to the Dataset Fields contained in a Dataset. Select all that apply.",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": true,
     "Options": [
@@ -532,7 +533,7 @@
     "DSMCategoryId": 2,
     "SectionName": "Dataset Content",
     "SectionId": "10",
-    "Question": "The following statements refer to Value-Level (measurements) content reported in a Dataset Field. Select all that apply.\t",
+    "Question": "The following statements refer to the data values (measurements) recorded for each variable reported by a Dataset Field. Select all that apply.",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": true,
     "Options": [
@@ -587,14 +588,14 @@
     "DSMCategoryId": 2,
     "SectionName": "Metadata Content",
     "SectionId": "11",
-    "Question": "The following statements refer to Study/Project Level metadata that provides context for the datasets interpretation. Select all that apply.        ",
+    "Question": "The following statemets refer to the metadata reported about the study/project related context surrounding the datasets. Select all that apply.",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": false,
     "Options": [
       {
         "Id": 1,
         "IndicatorId": "DSM-0-C1",
-        "IndicatorText": "Metadata does NOT contain context-related information required to interpret the data",
+        "IndicatorText": "Study/Project-Level metadata is NOT reported",
         "MaturityLevel": "Level 0",
         "Category": "[C] Content \u0026 Context",
         "SubCategory": "Metadata Content",
@@ -605,7 +606,7 @@
       {
         "Id": 2,
         "IndicatorId": "DSM-1-C1",
-        "IndicatorText": "Dataset Descriptor(s) includes Descriptive Study/Project-Level summary information",
+        "IndicatorText": "Dataset Descriptor includes Descriptive Study/Project-Level summary information",
         "MaturityLevel": "Level 1",
         "Category": "[C] Content \u0026 Context",
         "SubCategory": "Metadata Content",
@@ -616,7 +617,7 @@
       {
         "Id": 3,
         "IndicatorId": "DSM-2-C1",
-        "IndicatorText": "The locally defined Domain Model contains concepts that describes the overall project/study design, the relationships between the Datasets, the key entities reported within the Datasets and the relationships between them.",
+        "IndicatorText": "A locally defined Domain Model contains concepts that describes the overall project/study design, the relationships between the Datasets, the key entities reported within the Datasets and the relationships between them.",
         "MaturityLevel": "Level 2",
         "Category": "[C] Content \u0026 Context",
         "SubCategory": "Metadata Content",
@@ -653,7 +654,7 @@
     "DSMCategoryId": 2,
     "SectionName": "Metadata Content",
     "SectionId": "12",
-    "Question": "The following statements refer to Dataset-Level metadata reported in a Dataset\u0027s Descriptor. Select all that apply.\t",
+    "Question": "The following statements refer to different metatadata content reported in a Dataset\u0027s Descriptor. Select all that apply.",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": false,
     "Options": [
@@ -671,7 +672,7 @@
       {
         "Id": 2,
         "IndicatorId": "DSM-1-C2",
-        "IndicatorText": "Dataset Descriptor(s) includes Identifying \u0026 Descriptive Dataset-Level metadata",
+        "IndicatorText": "Dataset Descriptor includes Identifying \u0026 Descriptive Dataset-Level metadata",
         "MaturityLevel": "Level 1, Level 2",
         "Category": "[C] Content \u0026 Context",
         "SubCategory": "Metadata Content",
@@ -682,7 +683,7 @@
       {
         "Id": 3,
         "IndicatorId": "DSM-1-C3",
-        "IndicatorText": "Dataset Descriptor(s) contains access information for the Dataset",
+        "IndicatorText": "Dataset Descriptor contains access information for the Dataset",
         "MaturityLevel": "Level 1, Level 2",
         "Category": "[C] Content \u0026 Context",
         "SubCategory": "Metadata Content",
@@ -719,7 +720,7 @@
     "DSMCategoryId": 2,
     "SectionName": "Metadata Content",
     "SectionId": "13",
-    "Question": "The following statements refer to Field-level metadata. Select all that apply.",
+    "Question": "The following statements refer to field-level metadata. Select all that apply. (None is an option)",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": true,
     "Options": [
@@ -763,7 +764,7 @@
     "DSMCategoryId": 2,
     "SectionName": "Metadata Content",
     "SectionId": "14",
-    "Question": "The following statements refer to value-level metadata. Select all that apply.",
+    "Question": "The following statements refer to value-level metadata. Select all that apply. (None is an option)",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": true,
     "Options": [
@@ -771,7 +772,7 @@
         "Id": 1,
         "IndicatorId": "DSM-2-C7",
         "IndicatorText": "Dataset Descriptor includes Value-level Metadata or if applicable includes a reference to a locally defined Data Dictionary ",
-        "MaturityLevel": "Level 2, Level 3",
+        "MaturityLevel": "Level 2",
         "Category": "[C] Content \u0026 Context",
         "SubCategory": "Metadata Content",
         "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-2-c7",
@@ -796,7 +797,7 @@
     "DSMCategoryId": 3,
     "SectionName": "Storage  Capability",
     "SectionId": "15",
-    "Question": "The following statements refer to the Storage Capabilities of the Data and Metadata Hosting Environments. Select all that apply.\t",
+    "Question": "The following statements refer to the Storage Capabilities of the Data and Metadata Hosting Environments. Select all that apply.",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": false,
     "Options": [
@@ -862,14 +863,14 @@
     "DSMCategoryId": 3,
     "SectionName": "Retrieval Capability",
     "SectionId": "16",
-    "Question": "The following statements refer to the Retrieval Capabilities of the Data and Metadata Hosting Environments. Select all that apply.\t",
+    "Question": "The following statements refer to the Retrieval Capabilities of the Data and Metadata Hosting Environments. Select all that apply.",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": false,
     "Options": [
       {
         "Id": 1,
         "IndicatorId": "DSM-0-H2",
-        "IndicatorText": "Data or metadata is hosted in an accessible resource but with no retrieval capability",
+        "IndicatorText": "Data or metadata hosted in an accessible resource but with no retrieval capability",
         "MaturityLevel": "Level 0",
         "Category": "[H] Hosting environment capabilities",
         "SubCategory": "Retrieval Capability",
@@ -950,14 +951,14 @@
     "DSMCategoryId": 3,
     "SectionName": "Searching Capability",
     "SectionId": "17",
-    "Question": "The following statements refer to the Search Capabilities of the Data and Metadata Hosting Environments. Select all that apply.\t",
+    "Question": "The following statements refer to the Search Capabilities of the Data and Metadata Hosting Environments. Select all that apply.",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": false,
     "Options": [
       {
         "Id": 1,
         "IndicatorId": "DSM-0-H3",
-        "IndicatorText": "Hosting enviornment does NOT offer searching capabilities to discover data or metadata ",
+        "IndicatorText": "Dataset\u0027s Metadata is NOT searchable via keywords or elements within the Descriptor ",
         "MaturityLevel": "Level 0",
         "Category": "[H] Hosting environment capabilities",
         "SubCategory": "Searching Capability",

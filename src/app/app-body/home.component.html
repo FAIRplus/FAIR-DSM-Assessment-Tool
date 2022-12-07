@@ -2,7 +2,9 @@
   <div class="card-container">
     <nz-tabset nzType="card">
       <nz-tab nzTitle="Representation & Format" (nzClick)="tabClicked(1)">
-
+        <h3>
+         Focus: {{tab1CurrentData.SectionName}}
+        </h3>
         <p class="tab-question-txt">
           [ {{tab1CurrentData.SectionId}} of {{tab1Data.length+tab2Data.length+tab3Data.length}}  ]
           {{ tab1CurrentData ? tab1CurrentData.Question : "" }}
@@ -37,6 +39,9 @@
       </nz-tab>
 
       <nz-tab nzTitle="Content & Context" (nzClick)="tabClicked(2)" >
+        <h3>
+          Focus: {{tab2CurrentData.SectionName}}
+        </h3>
         <p class="tab-question-txt">
           [ {{tab2CurrentData.SectionId}} of {{tab1Data.length+tab2Data.length+tab3Data.length}}  ]
           {{ tab2CurrentData ? tab2CurrentData.Question : "" }}
@@ -71,6 +76,9 @@
       </nz-tab>
 
       <nz-tab nzTitle="Hosting Environment Capabilities" (nzClick)="tabClicked(3)">
+        <h3>
+          Focus: {{tab3CurrentData.SectionName}}
+        </h3>
         <p class="tab-question-txt">
           [ {{tab3CurrentData.SectionId}} of {{tab1Data.length+tab2Data.length+tab3Data.length}} ]
           {{ tab3CurrentData ? tab3CurrentData.Question : "" }}
