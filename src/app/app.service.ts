@@ -16,7 +16,7 @@ export class AppService {
    this.http.get("assets/app-data/FAIR_DSM_ASSESS_v1.1.json").subscribe(data =>{
     console.log("data is loaded.");
     this.appData = data;
-    console.log(this.appData);
+    // console.log(this.appData);
   })
  }
 }

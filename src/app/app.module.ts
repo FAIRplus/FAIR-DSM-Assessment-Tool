@@ -19,6 +19,7 @@ import { AntDesignModule } from './ant-design/ant-design.module';
 import { HeaderComponent } from './app-header/header.component';
 import { FooterComponent } from './app-footer/footer.component';
 import { PrintDetailComponent } from './print-detail/print-detail.component';
+import {LandingComponent} from "./app-home/landing.component";
 
 registerLocaleData(en);
 
@@ -27,7 +28,8 @@ registerLocaleData(en);
     AppComponent,
     HeaderComponent,
     FooterComponent,
-	PrintDetailComponent
+    LandingComponent,
+	  PrintDetailComponent
   ],
   imports: [
     BrowserModule,
