@@ -7,7 +7,6 @@ import {
   UserResponseData,
 } from '../interface/question-model';
 import {Router} from "@angular/router";
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -25,7 +24,8 @@ export class HomeComponent implements OnInit {
   tab1Data: QuestionModel[] = [];
   tab2Data: QuestionModel[] = [];
   tab3Data: QuestionModel[] = [];
-
+  //QuestionsToSkip: Set<string>= new Set();
+  QuestionsToSkip: Set<string>= new Set();
   baseLevelURI = "https://fairplus.github.io/Data-Maturity/docs/Levels/Level";
 
   constructor(private appService: AppService, private router: Router) {}
@@ -73,41 +73,99 @@ export class HomeComponent implements OnInit {
     console.log('tab1CurrentData: ', this.tab1CurrentData);
   }
 
-  currentSelectedTab: number = 1;
+  currentSelectedTab: number = 0;
   currentTabBackwardBtnDisable: boolean = true;
   currentTabForwardBtnDisable: boolean = false;
-  tabClicked(tab:number){
+  tabClicked(tab:number, qindex?:number){
     console.log('tab: ', tab);
     this.currentSelectedTab = tab;
 
-    if(this.currentSelectedTab===1) this.setCurrentBackwardForwardButton(this.tab1CurrentDataIndex,this.tab1Data);
-    if(this.currentSelectedTab===2) this.setCurrentBackwardForwardButton(this.tab2CurrentDataIndex,this.tab2Data);
-    if(this.currentSelectedTab===3) this.setCurrentBackwardForwardButton(this.tab3CurrentDataIndex,this.tab3Data);
+    if(this.currentSelectedTab===0) this.setCurrentBackwardForwardButton(this.tab1CurrentDataIndex,this.tab1Data);
+    if(this.currentSelectedTab===1) this.setCurrentBackwardForwardButton(this.tab2CurrentDataIndex,this.tab2Data);
+    if(this.currentSelectedTab===2) this.setCurrentBackwardForwardButton(this.tab3CurrentDataIndex,this.tab3Data);
+    if(qindex!==undefined){
+     if(tab==1){
+      this.tab2CurrentDataIndex=qindex
+      this.tab2CurrentData = this.tab2Data[qindex];
+      //console.log('tab2CurrentData: ', this.tab2CurrentData);
+      this.setCurrentBackwardForwardButton(this.tab2CurrentDataIndex,this.tab2Data);
+     }else if(tab==2){
+      this.tab3CurrentDataIndex=qindex
+      this.tab3CurrentData = this.tab3Data[qindex];
+      //console.log('tab2CurrentData: ', this.tab2CurrentData);
+      this.setCurrentBackwardForwardButton(this.tab3CurrentDataIndex,this.tab3Data);
+     }
+    }
   }
 
   setCurrentBackwardForwardButton(tabCurrentDataIndex:any,tabData:any){
-    this.currentTabBackwardBtnDisable = tabCurrentDataIndex === 0 ? true: false;
-    this.currentTabForwardBtnDisable = tabCurrentDataIndex === tabData.length - 1 ? true: false;
+    // this.currentTabBackwardBtnDisable = tabCurrentDataIndex === 0 ? true: false;
+    // this.currentTabForwardBtnDisable = tabCurrentDataIndex === tabData.length - 1 ? true: false;
+    if(this.currentSelectedTab===0 && tabCurrentDataIndex ==0){
+      this.currentTabBackwardBtnDisable=true;
+    }else{
+      this.currentTabBackwardBtnDisable=false;
+    }
+    if( this.currentSelectedTab ===2 && this.tab3CurrentDataIndex === tabData.length -1 ){
+      this.currentTabForwardBtnDisable=true;
+    }else{
+      this.currentTabForwardBtnDisable=false;
+    }
   }
 
   tabBackwardBtnClick() {
-    if(this.currentSelectedTab===1){
+    if(this.currentSelectedTab===0){
     console.log('tab1BackwardBtnClick');
-    this.tab1CurrentDataIndex = this.tab1CurrentDataIndex - 1;
+
+    let findPreviousIndex=this.tab1CurrentDataIndex;
+    do{
+      findPreviousIndex=findPreviousIndex - 1
+    }while(this.QuestionsToSkip.has(findPreviousIndex +1 as any))
+
+    this.tab1CurrentDataIndex=findPreviousIndex;
     this.tab1CurrentData = this.tab1Data[this.tab1CurrentDataIndex];
     //console.log('tab1CurrentData: ', this.tab1CurrentData);
     this.setCurrentBackwardForwardButton(this.tab1CurrentDataIndex,this.tab1Data);
     }
-    else  if(this.currentSelectedTab===2){
+    else if(this.currentSelectedTab===1){
       console.log('tab2BackwardBtnClick');
-      this.tab2CurrentDataIndex = this.tab2CurrentDataIndex - 1;
+
+      let findPreviousIndex=this.tab2CurrentDataIndex + this.tab1Data.length;
+      do{
+        findPreviousIndex=findPreviousIndex - 1
+      }while(this.QuestionsToSkip.has(findPreviousIndex +1 as any))
+
+      this.tab2CurrentDataIndex=findPreviousIndex - this.tab1Data.length;
+
+      if((this.tab2CurrentDataIndex) < 0 ){
+        const diff= this.tab2CurrentDataIndex + this.tab1Data.length;
+        this.tabClicked(0,diff);
+        console.log('jump')
+        return;
+      }
+
       this.tab2CurrentData = this.tab2Data[this.tab2CurrentDataIndex];
       //console.log('tab1CurrentData: ', this.tab1CurrentData);
       this.setCurrentBackwardForwardButton(this.tab2CurrentDataIndex,this.tab2Data);
+
     }
-    else  if(this.currentSelectedTab===3){
+    else  if(this.currentSelectedTab===2){
         console.log('tab3BackwardBtnClick');
-        this.tab3CurrentDataIndex = this.tab3CurrentDataIndex - 1;
+
+        let findPreviousIndex=this.tab3CurrentDataIndex + this.tab1Data.length + this.tab2Data.length;
+        do{
+          findPreviousIndex=findPreviousIndex - 1
+        }while(this.QuestionsToSkip.has(findPreviousIndex +1 as any))
+
+        this.tab3CurrentDataIndex=findPreviousIndex - this.tab1Data.length - this.tab2Data.length;
+
+        if((this.tab3CurrentDataIndex) < 0 ){
+          const diff= this.tab3CurrentDataIndex + this.tab2Data.length;
+          this.tabClicked(1,diff);
+          console.log('jump')
+          return;
+        }
+
         this.tab3CurrentData = this.tab3Data[this.tab3CurrentDataIndex];
         //console.log('tab1CurrentData: ', this.tab1CurrentData);
         this.setCurrentBackwardForwardButton(this.tab3CurrentDataIndex,this.tab3Data);
@@ -116,29 +174,66 @@ export class HomeComponent implements OnInit {
   }
 
   tabForwardBtnClick() {
-    if(this.currentSelectedTab===1){
+    if(this.currentSelectedTab===0){
       console.log('tab1ForwardBtnClick');
-      this.tab1CurrentDataIndex = this.tab1CurrentDataIndex + 1;
-      this.tab1CurrentData = this.tab1Data[this.tab1CurrentDataIndex];
-      //console.log('tab1CurrentData: ', this.tab1CurrentData);
-      this.setCurrentBackwardForwardButton(this.tab1CurrentDataIndex,this.tab1Data);
+      if(this.tab1CurrentData.IsAnswered=== true) {
+
+        let findNextIndex=this.tab1CurrentDataIndex;
+        do{
+          findNextIndex=findNextIndex+1
+        }while(this.QuestionsToSkip.has(findNextIndex +1 as any))
+
+        this.tab1CurrentDataIndex=findNextIndex;
+
+        if(this.tab1Data.length <= (this.tab1CurrentDataIndex)){
+          const diff= this.tab1CurrentDataIndex -this.tab1Data.length;
+          this.tabClicked(1,diff);
+          console.log('jump')
+          return;
+        }
+
+        this.tab1CurrentData = this.tab1Data[this.tab1CurrentDataIndex];
+        //console.log('tab1CurrentData: ', this.tab1CurrentData);
+        this.setCurrentBackwardForwardButton(this.tab1CurrentDataIndex,this.tab1Data);
+      }
     }
-    else if(this.currentSelectedTab===2){
+
+    else if(this.currentSelectedTab===1){
       console.log('tab2ForwardBtnClick');
-      this.tab2CurrentDataIndex = this.tab2CurrentDataIndex + 1;
-      this.tab2CurrentData = this.tab2Data[this.tab2CurrentDataIndex];
-      //console.log('tab1CurrentData: ', this.tab1CurrentData);
-      this.setCurrentBackwardForwardButton(this.tab2CurrentDataIndex,this.tab2Data);
+      if(this.tab2CurrentData.IsAnswered=== true) {
+        let findNextIndex=this.tab2CurrentDataIndex + this.tab1Data.length;
+        do{
+          findNextIndex=findNextIndex+1
+        }while(this.QuestionsToSkip.has(findNextIndex +1 as any))
+
+        this.tab2CurrentDataIndex=findNextIndex - this.tab1Data.length;
+        if(this.tab2Data.length  <= (this.tab2CurrentDataIndex)){
+          const diff= this.tab2CurrentDataIndex -this.tab2Data.length;
+          this.tabClicked(2,diff);
+          console.log('jump')
+          return;
+        }
+        this.tab2CurrentData = this.tab2Data[this.tab2CurrentDataIndex];
+        //console.log('tab2CurrentData: ', this.tab2CurrentData);
+        this.setCurrentBackwardForwardButton(this.tab2CurrentDataIndex,this.tab2Data);
+      }
     }
-    else if(this.currentSelectedTab===3){
+
+    else if(this.currentSelectedTab===2){
       console.log('tab3ForwardBtnClick');
-      this.tab3CurrentDataIndex = this.tab3CurrentDataIndex + 1;
-      this.tab3CurrentData = this.tab3Data[this.tab3CurrentDataIndex];
-      //console.log('tab1CurrentData: ', this.tab1CurrentData);
-      this.setCurrentBackwardForwardButton(this.tab3CurrentDataIndex,this.tab3Data);
+      if(this.tab3CurrentData.IsAnswered=== true) {
+        let findNextIndex=this.tab3CurrentDataIndex + this.tab1Data.length + this.tab2Data.length
+        do{
+          findNextIndex=findNextIndex+1
+        }while(this.QuestionsToSkip.has(findNextIndex +1 as any))
+
+        this.tab3CurrentDataIndex=findNextIndex - this.tab1Data.length - this.tab2Data.length;
+        this.tab3CurrentData = this.tab3Data[this.tab3CurrentDataIndex];
+        //console.log('tab3CurrentData: ', this.tab3CurrentData);
+        this.setCurrentBackwardForwardButton(this.tab3CurrentDataIndex,this.tab3Data);
+      }
     }
   }
-
 
   userResponseData: UserResponseData[] = [];
 
@@ -160,7 +255,7 @@ export class HomeComponent implements OnInit {
         return dt.IsAnswered === true;
       }
     );
-    if ( answeredQuestion &&answeredQuestion.length === this.appService.appData.length)
+    if ( answeredQuestion && answeredQuestion.length + this.QuestionsToSkip.size === this.appService.appData.length)
     {
       this.isVisible = true;
 
@@ -391,7 +486,11 @@ export class HomeComponent implements OnInit {
   }
 
   radioChecked(sourceTab: number,data: QuestionModel,selectedOption: OptionsEntity,event?: any) {
-    console.log(' questionID, selectedOptionID ',data.SectionId,selectedOption.Id,event.target.checked);
+    // console.log(' questionID, selectedOptionID ',data.SectionId,selectedOption.Id,event.target.checked);
+    (selectedOption.SkipQuestionIDs||[]).forEach(id=>{
+      this.QuestionsToSkip.add(id);
+    });
+
     let chekedValue = event.target.checked;
      if (sourceTab == 1)
       this.updateTabData(1,data, selectedOption.Id, chekedValue);

@@ -1,0 +1,1117 @@
+[
+  {
+    "DSMCategory": "[R] Representation and format",
+    "DSMCategoryId": 1,
+    "SectionName": "Dataset Representation",
+    "SectionId": "1",
+    "Question": "Which of the following statements best describes the current state of Data to be shared and re-used?",
+    "MultipleAllowed": false,
+    "NoneOfAboveAllowed": false,
+    "Options": [
+      {
+        "Id": 1,
+        "IndicatorId": "DSM-0-R2",
+        "IndicatorText": "No representation of Data purposed for sharing and re-use is available",
+        "MaturityLevel": "Level 0",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Dataset Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-0-r2",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": [
+          2,
+          3,
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "Id": 2,
+        "IndicatorId": "DSM-1-R2",
+        "IndicatorText": "Data intended for sharing and reuse have a purposely defined representation as Datasets",
+        "MaturityLevel": "Level 1, Level 2, Level 3, Level 4",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Dataset Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-r2",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      }
+    ],
+    "Image": "1.jpg"
+  },
+  {
+    "DSMCategory": "[R] Representation and format",
+    "DSMCategoryId": 1,
+    "SectionName": "Dataset Representation",
+    "SectionId": "2",
+    "Question": "Which of the following statements best describe the state of your shareable Datasets?",
+    "MultipleAllowed": true,
+    "NoneOfAboveAllowed": true,
+    "Options": [
+      {
+        "Id": 1,
+        "IndicatorId": "DSM-2-R2",
+        "IndicatorText": "Dataset(s) are standardised to a locally defined Dataset Model suitable for data sharing and re-use",
+        "MaturityLevel": "Level 2",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Dataset Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-2-r2",
+        "IsSelected": false,
+        "SuperIndicators": [
+          "DSM-3-R2"
+        ],
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 2,
+        "IndicatorId": "DSM-3-R2",
+        "IndicatorText": "Dataset(s) are standardised to relevant Domain or Community Standard Dataset Model(s) suitable for data sharing and re-use",
+        "MaturityLevel": "Level 3",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Dataset Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-r2",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 3,
+        "IndicatorId": "DSM-4-R2",
+        "IndicatorText": "Dataset(s) are standardised to a defined Semantic Data Model and represented using Linked Data Represetations suitable for data sharing and re-use",
+        "MaturityLevel": "Level 4",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Dataset Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-4-r2",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 4,
+        "IndicatorId": "DSM-5-R2",
+        "IndicatorText": "Dataset(s) intended for sharing and re-use are granularly standardised and managed at the Data Element Level (e.g. ISO 11179 MDR standard)",
+        "MaturityLevel": "Level 5",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Dataset Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-5-r2",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      }
+    ],
+    "Image": "2.jpg"
+  },
+  {
+    "DSMCategory": "[R] Representation and format",
+    "DSMCategoryId": 1,
+    "SectionName": "Dataset Format",
+    "SectionId": "3",
+    "Question": "Which of the following statements best describes the Dataset\u0027s current format ?",
+    "MultipleAllowed": false,
+    "NoneOfAboveAllowed": false,
+    "Options": [
+      {
+        "Id": 1,
+        "IndicatorId": "DSM-0-R5",
+        "IndicatorText": "Dataset(s) are NOT available in a Machine Readable Format",
+        "MaturityLevel": "Level 0",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Dataset Format",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-0-r5",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 2,
+        "IndicatorId": "DSM-1-R5",
+        "IndicatorText": "Dataset(s) available in Machine Readable Format ",
+        "MaturityLevel": "Level 1, Level 2",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Dataset Format",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-r5",
+        "IsSelected": false,
+        "SuperIndicators": [
+          "DSM-3-R5",
+          "DSM-4-R5"
+        ],
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 3,
+        "IndicatorId": "DSM-3-R5",
+        "IndicatorText": "Dataset(s) available in non-proprietary Machine Readable Format as prescribed by a standard Dataset Model",
+        "MaturityLevel": "Level 3",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Dataset Format",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-r5",
+        "IsSelected": false,
+        "SuperIndicators": [
+          "DSM-4-R5"
+        ],
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 4,
+        "IndicatorId": "DSM-4-R5",
+        "IndicatorText": "Datasets are available in a Machine Readable and Machine Interpretable format",
+        "MaturityLevel": "Level 4",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Dataset Format",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-4-r5",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      }
+    ],
+    "Image": "3.jpg"
+  },
+  {
+    "DSMCategory": "[R] Representation and format",
+    "DSMCategoryId": 1,
+    "SectionName": "Dataset Metadata Representation",
+    "SectionId": "4",
+    "Question": "Which of the following statements best describes the current state of the Dataset\u0027s Metadata?",
+    "MultipleAllowed": false,
+    "NoneOfAboveAllowed": false,
+    "Options": [
+      {
+        "Id": 1,
+        "IndicatorId": "DSM-0-R3",
+        "IndicatorText": "Metadata is available but NOT formally represented in a structured Dataset Descriptor ",
+        "MaturityLevel": "Level 0",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Dataset Metadata Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-0-r3",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": [
+          5,
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "Id": 2,
+        "IndicatorId": "DSM-1-R0",
+        "IndicatorText": "Dataset Metadata is formally represented in the form of an Identifiable Dataset Descriptor",
+        "MaturityLevel": "Level 1, Level 2, Level 3",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Dataset Metadata Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-r0",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      }
+    ],
+    "Image": "4.jpg"
+  },
+  {
+    "DSMCategory": "[R] Representation and format",
+    "DSMCategoryId": 1,
+    "SectionName": "Dataset Metadata Representation",
+    "SectionId": "5",
+    "Question": "Which of the following statements best describes how the Dataset\u0027s metadata is modeled and represented?",
+    "MultipleAllowed": true,
+    "NoneOfAboveAllowed": true,
+    "Options": [
+      {
+        "Id": 1,
+        "IndicatorId": "DSM-1-R3",
+        "IndicatorText": "A representation of the Dataset Descriptor conforming to a relevant General Purpose Metadata Schema is available",
+        "MaturityLevel": "Level 1",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Dataset Metadata Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-r3",
+        "IsSelected": false,
+        "SuperIndicators": [
+          "DSM-2-R3",
+          "DSM-3-R3"
+        ],
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 2,
+        "IndicatorId": "DSM-2-R3",
+        "IndicatorText": "Dataset Descriptor(s) adopt a Metadata Schema representation that describes the locally defined Dataset Model including its structural metadata (i.e. Field-level and Value-level metadata)",
+        "MaturityLevel": "Level 2",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Dataset Metadata Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-2-r3",
+        "IsSelected": false,
+        "SuperIndicators": [
+          "DSM-3-R3"
+        ],
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 3,
+        "IndicatorId": "DSM-3-R3",
+        "IndicatorText": "Dataset Descriptor(s) use community-defined or domain-specific metadata standard ",
+        "MaturityLevel": "Level 3",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Dataset Metadata Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-r3",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 4,
+        "IndicatorId": "DSM-4-R3",
+        "IndicatorText": "A Semantic Data Model (Metadata) used for data harmonisation across Datasets is formally defined and represented using Linked Data Representations",
+        "MaturityLevel": "Level 4",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Dataset Metadata Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-4-r3",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 5,
+        "IndicatorId": "DSM-5-R3",
+        "IndicatorText": "Common Data Elements and their value sets are defined and registered in a managed Metadata Registry  ",
+        "MaturityLevel": "Level 5",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Dataset Metadata Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-5-r3",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      }
+    ],
+    "Image": "5.jpg"
+  },
+  {
+    "DSMCategory": "[R] Representation and format",
+    "DSMCategoryId": 1,
+    "SectionName": "Metadata Format",
+    "SectionId": "6",
+    "Question": "Which of the following statements best describes the current format of the Dataset Metadata?",
+    "MultipleAllowed": true,
+    "NoneOfAboveAllowed": false,
+    "Options": [
+      {
+        "Id": 1,
+        "IndicatorId": "DSM-0-R4",
+        "IndicatorText": "Metadata is NOT available in a Machine Readable Format",
+        "MaturityLevel": "Level 0",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Metadata Format",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-0-r4",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 2,
+        "IndicatorId": "DSM-1-R4",
+        "IndicatorText": "Dataset Descriptor is available in Machine Readable Format",
+        "MaturityLevel": "Level 1, Level 2",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Metadata Format",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-r4",
+        "IsSelected": false,
+        "SuperIndicators": [
+          "DSM-3-R4",
+          "DSM-4-R4"
+        ],
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 3,
+        "IndicatorId": "DSM-2-R4",
+        "IndicatorText": "A formal documentation of the locally defined Domain Model is available in a Human Readable Format",
+        "MaturityLevel": "Level 2, Level 3",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Metadata Format",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-2-r4",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 4,
+        "IndicatorId": "DSM-3-R4",
+        "IndicatorText": "A formal documentation of the adopted Standard Dataset Model is available in a Machine Readable Format",
+        "MaturityLevel": "Level 3",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Metadata Format",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-r4",
+        "IsSelected": false,
+        "SuperIndicators": [
+          "DSM-4-R4"
+        ],
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 5,
+        "IndicatorId": "DSM-4-R4",
+        "IndicatorText": "A Semantic Data Model (Metadata) describing the data is represented in a Machine Readable and Machine Interptretable format ",
+        "MaturityLevel": "Level 4",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Metadata Format",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-4-r4",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      }
+    ],
+    "Image": "6.jpg"
+  },
+  {
+    "DSMCategory": "[R] Representation and format",
+    "DSMCategoryId": 1,
+    "SectionName": "Contextual Metadata Representation",
+    "SectionId": "7",
+    "Question": "Which of the following statements best describes how information describing the context of the dataset(s) is represented?",
+    "MultipleAllowed": false,
+    "NoneOfAboveAllowed": false,
+    "Options": [
+      {
+        "Id": 1,
+        "IndicatorId": "DSM-0-R1",
+        "IndicatorText": "Contextual Metadata is NOT formally represented in any form ",
+        "MaturityLevel": "Level 0",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Contextual Metadata Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-0-r1",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": [
+          11
+        ]
+      },
+      {
+        "Id": 2,
+        "IndicatorId": "DSM-1-R1",
+        "IndicatorText": "Contextual Metadata is represented at summary level and reported in the Dataset Descriptor",
+        "MaturityLevel": "Level 1",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Contextual Metadata Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-r1",
+        "IsSelected": false,
+        "SuperIndicators": [
+          "DSM-2-R1",
+          "DSM-3-R1"
+        ],
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 3,
+        "IndicatorId": "DSM-2-R1",
+        "IndicatorText": "Contextual Metadata is formally represented and reported in the form of a locally defined Domain Model",
+        "MaturityLevel": "Level 2",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Contextual Metadata Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-2-r1",
+        "IsSelected": false,
+        "SuperIndicators": [
+          "DSM-3-R1"
+        ],
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 4,
+        "IndicatorId": "DSM-3-R1",
+        "IndicatorText": "Contextual Metadata is formally represented and modeled according to a community or domain-specific standard",
+        "MaturityLevel": "Level 3",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Contextual Metadata Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-r1",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 5,
+        "IndicatorId": "DSM-4-R1",
+        "IndicatorText": "Contextual Metadata is formally represented by a set of semantically defined Common Data Elements",
+        "MaturityLevel": "Level 4",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Contextual Metadata Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-4-r1",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 6,
+        "IndicatorId": "DSM-5-R1",
+        "IndicatorText": "Data content and context is defined and managed by Master Data Management",
+        "MaturityLevel": "Level 5",
+        "Category": "[R] Representation and format",
+        "SubCategory": "Contextual Metadata Representation",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-5-r1",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      }
+    ],
+    "Image": "7.jpg"
+  },
+  {
+    "DSMCategory": "[C] Content \u0026 Context",
+    "DSMCategoryId": 2,
+    "SectionName": "Dataset Identification",
+    "SectionId": "8",
+    "Question": "The following statements refer to Dataset-Level content. Select all that apply.",
+    "MultipleAllowed": true,
+    "NoneOfAboveAllowed": false,
+    "Options": [
+      {
+        "Id": 1,
+        "IndicatorId": "DSM-0-C0",
+        "IndicatorText": "Dataset(s) are NOT Identifiable via Unique Identifiers",
+        "MaturityLevel": "Level 0",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Dataset Identification",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-0-c0",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 2,
+        "IndicatorId": "DSM-1-C0",
+        "IndicatorText": "Each Dataset purposed for sharing and re-use is assigned a unique identifier",
+        "MaturityLevel": "Level 1",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Dataset Identification",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-c0",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 3,
+        "IndicatorId": "DSM-2-C2",
+        "IndicatorText": "Where applicable, data is structured in the Dataset according to the Tidy Data Principles",
+        "MaturityLevel": "Level 2, Level 3",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Dataset Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-2-c2",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 4,
+        "IndicatorId": "DSM-3-C2",
+        "IndicatorText": "Where applicable, Dataset(s) definition and content are reported in compliance with relevant community-defined Data Reporting Guidelines",
+        "MaturityLevel": "Level 3",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Dataset Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-c2",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 5,
+        "IndicatorId": "DSM-4-C2",
+        "IndicatorText": "Dataset(s) content is harmonised against a designed-for-purpose Semantic Data Model",
+        "MaturityLevel": "Level 4",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Dataset Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-4-c2",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      }
+    ],
+    "Image": "8.jpg"
+  },
+  {
+    "DSMCategory": "[C] Content \u0026 Context",
+    "DSMCategoryId": 2,
+    "SectionName": "Dataset Content",
+    "SectionId": "9",
+    "Question": "The following statements refer to Field-Level content reported in a Dataset. Select all that apply.\t",
+    "MultipleAllowed": true,
+    "NoneOfAboveAllowed": true,
+    "Options": [
+      {
+        "Id": 1,
+        "IndicatorId": "DSM-2-C3",
+        "IndicatorText": "Dataset(s) include Reference Fields that enable joining related datasets",
+        "MaturityLevel": "Level 2",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Dataset Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-2-c3",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 2,
+        "IndicatorId": "DSM-3-C3",
+        "IndicatorText": "Where applicable, Dataset Field Names use standard controlled terms as recommended by the adopted Standard",
+        "MaturityLevel": "Level 3",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Dataset Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-c3",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 3,
+        "IndicatorId": "DSM-4-C3",
+        "IndicatorText": "Key Dataset Fields are mapped to Common Data Elements as defined by the Semantic Data Model ",
+        "MaturityLevel": "Level 4",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Dataset Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-4-c3",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 4,
+        "IndicatorId": "DSM-5-C3",
+        "IndicatorText": "Dataset Fields are linked and harmonized against enterprise managed Metadata Elements (e.g. MDR registered Data Elements)",
+        "MaturityLevel": "Level 5",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Dataset Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-5-c3",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      }
+    ],
+    "Image": "9.jpg"
+  },
+  {
+    "DSMCategory": "[C] Content \u0026 Context",
+    "DSMCategoryId": 2,
+    "SectionName": "Dataset Content",
+    "SectionId": "10",
+    "Question": "The following statements refer to Value-Level (measurements) content reported in a Dataset Field. Select all that apply.\t",
+    "MultipleAllowed": true,
+    "NoneOfAboveAllowed": true,
+    "Options": [
+      {
+        "Id": 1,
+        "IndicatorId": "DSM-2-C4",
+        "IndicatorText": "Where applicable, Dataset Field Values are standardized against a locally defined Data Dictionary within and across related Datasets",
+        "MaturityLevel": "Level 2",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Dataset Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-2-c4",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 2,
+        "IndicatorId": "DSM-3-C4",
+        "IndicatorText": "Where applicable, Dataset Field Values are standardised against domain-specific Controlled Terminologies and/or Ontology Terms",
+        "MaturityLevel": "Level 3",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Dataset Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-c4",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 3,
+        "IndicatorId": "DSM-4-C4",
+        "IndicatorText": "Values for key Domain Entities reported in the Dataset(s) are standardised and assigned unique Standard Identifiers",
+        "MaturityLevel": "Level 4",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Dataset Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-4-c4",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 4,
+        "IndicatorId": "DSM-5-C4",
+        "IndicatorText": "Dataset Field values are controlled and managed via enterprise managed Reference and Master Data",
+        "MaturityLevel": "Level 5",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Dataset Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-5-c4",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      }
+    ],
+    "Image": "10.jpg"
+  },
+  {
+    "DSMCategory": "[C] Content \u0026 Context",
+    "DSMCategoryId": 2,
+    "SectionName": "Metadata Content",
+    "SectionId": "11",
+    "Question": "The following statements refer to Study/Project Level metadata that provides context for the datasets interpretation. Select all that apply.        ",
+    "MultipleAllowed": true,
+    "NoneOfAboveAllowed": false,
+    "Options": [
+      {
+        "Id": 1,
+        "IndicatorId": "DSM-0-C1",
+        "IndicatorText": "Metadata does NOT contain context-related information required to interpret the data",
+        "MaturityLevel": "Level 0",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Metadata Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-0-c1",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 2,
+        "IndicatorId": "DSM-1-C1",
+        "IndicatorText": "Dataset Descriptor(s) includes Descriptive Study/Project-Level summary information",
+        "MaturityLevel": "Level 1",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Metadata Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-c1",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 3,
+        "IndicatorId": "DSM-2-C1",
+        "IndicatorText": "The locally defined Domain Model contains concepts that describes the overall project/study design, the relationships between the Datasets, the key entities reported within the Datasets and the relationships between them.",
+        "MaturityLevel": "Level 2",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Metadata Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-2-c1",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 4,
+        "IndicatorId": "DSM-3-C1",
+        "IndicatorText": "Where applicable, study-level / experimental metadata is reported in compliance with relevant Minimum Information\u00A0Reporting Guidelines",
+        "MaturityLevel": "Level 3",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Metadata Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-c1",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 5,
+        "IndicatorId": "DSM-4-C1",
+        "IndicatorText": "A Semantic Data Model includes study design Data Elements and the relationships between them",
+        "MaturityLevel": "Level 4",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Metadata Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-4-c1",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      }
+    ],
+    "Image": "11.jpg"
+  },
+  {
+    "DSMCategory": "[C] Content \u0026 Context",
+    "DSMCategoryId": 2,
+    "SectionName": "Metadata Content",
+    "SectionId": "12",
+    "Question": "The following statements refer to Dataset-Level metadata reported in a Dataset\u0027s Descriptor. Select all that apply.\t",
+    "MultipleAllowed": true,
+    "NoneOfAboveAllowed": true,
+    "Options": [
+      {
+        "Id": 1,
+        "IndicatorId": "DSM-0-C2",
+        "IndicatorText": "Dataset Descriptor does NOT include a reference to the Dataset it describes",
+        "MaturityLevel": "Level 0",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Metadata Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-0-c2",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 2,
+        "IndicatorId": "DSM-1-C2",
+        "IndicatorText": "Dataset Descriptor(s) includes Identifying \u0026 Descriptive Dataset-Level metadata",
+        "MaturityLevel": "Level 1, Level 2",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Metadata Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-c2",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 3,
+        "IndicatorId": "DSM-1-C3",
+        "IndicatorText": "Dataset Descriptor(s) contains access information for the Dataset",
+        "MaturityLevel": "Level 1, Level 2",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Metadata Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-c3",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 4,
+        "IndicatorId": "DSM-2-C5",
+        "IndicatorText": "Dataset Descriptor includes reference to related Datasets and if applicable the relevant joining Dataset Fields",
+        "MaturityLevel": "Level 2",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Metadata Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-2-c5",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 5,
+        "IndicatorId": "DSM-3-C7",
+        "IndicatorText": "Dataset Descriptor references a standard license under which the dataset can be re-used.",
+        "MaturityLevel": "Level 3",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Metadata Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-c7",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      }
+    ],
+    "Image": "12.jpg"
+  },
+  {
+    "DSMCategory": "[C] Content \u0026 Context",
+    "DSMCategoryId": 2,
+    "SectionName": "Metadata Content",
+    "SectionId": "13",
+    "Question": "The following statements refer to Field-level metadata. Select all that apply.",
+    "MultipleAllowed": true,
+    "NoneOfAboveAllowed": true,
+    "Options": [
+      {
+        "Id": 1,
+        "IndicatorId": "DSM-2-C6",
+        "IndicatorText": "Dataset Descriptor includes Field-level Metadata as prescribed by a locally defined Dataset Model",
+        "MaturityLevel": "Level 2",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Metadata Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-2-c6",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 2,
+        "IndicatorId": "DSM-3-C6",
+        "IndicatorText": "Dataset Descriptor includes standard-compliant Field-level Metadata as prescribed by the adopted standard Dataset Model.",
+        "MaturityLevel": "Level 3",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Metadata Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-c6",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 3,
+        "IndicatorId": "DSM-4-C5",
+        "IndicatorText": "The Semantic Data Model includes a pre-defined set of Common Data Elements reported within the Datasets and the relationships between them",
+        "MaturityLevel": "Level 4",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Metadata Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-4-c5",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      }
+    ],
+    "Image": "13.jpg"
+  },
+  {
+    "DSMCategory": "[C] Content \u0026 Context",
+    "DSMCategoryId": 2,
+    "SectionName": "Metadata Content",
+    "SectionId": "14",
+    "Question": "The following statements refer to value-level metadata. Select all that apply.",
+    "MultipleAllowed": true,
+    "NoneOfAboveAllowed": true,
+    "Options": [
+      {
+        "Id": 1,
+        "IndicatorId": "DSM-2-C7",
+        "IndicatorText": "Dataset Descriptor includes Value-level Metadata or if applicable includes a reference to a locally defined Data Dictionary ",
+        "MaturityLevel": "Level 2, Level 3",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Metadata Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-2-c7",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 2,
+        "IndicatorId": "DSM-3-C5",
+        "IndicatorText": "Value Level Metadata includes Resolvable Identifiers for Controlled and/or Standard Terms reported in the Dataset ",
+        "MaturityLevel": "Level 3",
+        "Category": "[C] Content \u0026 Context",
+        "SubCategory": "Metadata Content",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-c5",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      }
+    ],
+    "Image": "14.jpg"
+  },
+  {
+    "DSMCategory": "[H] Hosting environment capabilities",
+    "DSMCategoryId": 3,
+    "SectionName": "Storage  Capability",
+    "SectionId": "15",
+    "Question": "The following statements refer to the Storage Capabilities of the Data and Metadata Hosting Environments. Select all that apply.\t",
+    "MultipleAllowed": true,
+    "NoneOfAboveAllowed": true,
+    "Options": [
+      {
+        "Id": 1,
+        "IndicatorId": "DSM-0-H1",
+        "IndicatorText": "Data or metadata is hosted in non-accessible  storage (e.g., personal desktop, local file system or archive)",
+        "MaturityLevel": "Level 0",
+        "Category": "[H] Hosting environment capabilities",
+        "SubCategory": "Storage  Capability",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-0-h1",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 2,
+        "IndicatorId": "DSM-1-H1",
+        "IndicatorText": "Metadata hosting environment stores and maintains an identifiable Dataset Descriptor for each identifiable Dataset",
+        "MaturityLevel": "Level 1",
+        "Category": "[H] Hosting environment capabilities",
+        "SubCategory": "Storage  Capability",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-h1",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 3,
+        "IndicatorId": "DSM-2-H1",
+        "IndicatorText": "The Data hosting environment\u0027s Persistence Model is aligned with a locally defined Domain Model to enable interpretation of Datasets",
+        "MaturityLevel": "Level 2",
+        "Category": "[H] Hosting environment capabilities",
+        "SubCategory": "Storage  Capability",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-2-h1",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 4,
+        "IndicatorId": "DSM-3-H1",
+        "IndicatorText": "The Data hosting environment\u0027s Persistence Model is aligned with a standard Dataset model or compliant with relevant Minimum Information Reporting Guidelines",
+        "MaturityLevel": "Level 3",
+        "Category": "[H] Hosting environment capabilities",
+        "SubCategory": "Storage  Capability",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-h1",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 5,
+        "IndicatorId": "DSM-4-H1",
+        "IndicatorText": "Data Hosting environment stores data in a relevant linked data store (e.g., Triple Store or Graph Databaase)  ",
+        "MaturityLevel": "Level 4",
+        "Category": "[H] Hosting environment capabilities",
+        "SubCategory": "Storage  Capability",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-4-h1",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      }
+    ],
+    "Image": "15.jpg"
+  },
+  {
+    "DSMCategory": "[H] Hosting environment capabilities",
+    "DSMCategoryId": 3,
+    "SectionName": "Retrieval Capability",
+    "SectionId": "16",
+    "Question": "The following statements refer to the Retrieval Capabilities of the Data and Metadata Hosting Environments. Select all that apply.\t",
+    "MultipleAllowed": true,
+    "NoneOfAboveAllowed": true,
+    "Options": [
+      {
+        "Id": 1,
+        "IndicatorId": "DSM-0-H2",
+        "IndicatorText": "Data or metadata is hosted in an accessible resource but with no retrieval capability",
+        "MaturityLevel": "Level 0",
+        "Category": "[H] Hosting environment capabilities",
+        "SubCategory": "Retrieval Capability",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-0-h2",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 2,
+        "IndicatorId": "DSM-1-H2",
+        "IndicatorText": "The Dataset and its Descriptor are indexed and retrievable (in the same or separate hosting environments) via unique and persistent identifiers ",
+        "MaturityLevel": "Level 1",
+        "Category": "[H] Hosting environment capabilities",
+        "SubCategory": "Retrieval Capability",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-h2",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 3,
+        "IndicatorId": "DSM-1-H3",
+        "IndicatorText": "Retrieval of the Dataset and the Dataset Descriptor utilises a standardized communication protocol that is open, free and universally implementable",
+        "MaturityLevel": "Level 1, Level 2, Level 3",
+        "Category": "[H] Hosting environment capabilities",
+        "SubCategory": "Retrieval Capability",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-h3",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 4,
+        "IndicatorId": "DSM-2-H2",
+        "IndicatorText": "Metadata hosting environment provides programmatic access and retrieval (API) for the Dataset Descriptor",
+        "MaturityLevel": "Level 2",
+        "Category": "[H] Hosting environment capabilities",
+        "SubCategory": "Retrieval Capability",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-2-h2",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 5,
+        "IndicatorId": "DSM-3-H2",
+        "IndicatorText": "For each dataset, the hosting environment maintains a globally unique, persistent and resolvable identifier for access and retrieval",
+        "MaturityLevel": "Level 3",
+        "Category": "[H] Hosting environment capabilities",
+        "SubCategory": "Retrieval Capability",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-h2",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 6,
+        "IndicatorId": "DSM-3-H4",
+        "IndicatorText": "If applicable, Dataset hosting environment offers dataset-level authentication and authorisation capabilities",
+        "MaturityLevel": "Level 3",
+        "Category": "[H] Hosting environment capabilities",
+        "SubCategory": "Retrieval Capability",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-h4",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 7,
+        "IndicatorId": "DSM-4-H2",
+        "IndicatorText": "Data Hosting Environment provides semantic querying capability ",
+        "MaturityLevel": "Level 4",
+        "Category": "[H] Hosting environment capabilities",
+        "SubCategory": "Retrieval Capability",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-4-h2",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      }
+    ],
+    "Image": "16.jpg"
+  },
+  {
+    "DSMCategory": "[H] Hosting environment capabilities",
+    "DSMCategoryId": 3,
+    "SectionName": "Searching Capability",
+    "SectionId": "17",
+    "Question": "The following statements refer to the Search Capabilities of the Data and Metadata Hosting Environments. Select all that apply.\t",
+    "MultipleAllowed": true,
+    "NoneOfAboveAllowed": false,
+    "Options": [
+      {
+        "Id": 1,
+        "IndicatorId": "DSM-0-H3",
+        "IndicatorText": "Hosting enviornment does NOT offer searching capabilities to discover data or metadata ",
+        "MaturityLevel": "Level 0",
+        "Category": "[H] Hosting environment capabilities",
+        "SubCategory": "Searching Capability",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-0-h3",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 2,
+        "IndicatorId": "DSM-1-H4",
+        "IndicatorText": "Metadata hosting environment offers the capability to browse and search contents of the Dataset Descriptor ",
+        "MaturityLevel": "Level 1",
+        "Category": "[H] Hosting environment capabilities",
+        "SubCategory": "Searching Capability",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-1-h4",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 3,
+        "IndicatorId": "DSM-2-H3",
+        "IndicatorText": "Data hosting environment offers the capability to browse and search related Datasets",
+        "MaturityLevel": "Level 2",
+        "Category": "[H] Hosting environment capabilities",
+        "SubCategory": "Searching Capability",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-2-h3",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 4,
+        "IndicatorId": "DSM-3-H3",
+        "IndicatorText": "Data Hosting environment utilises controlled terms and/or ontology terms to search within Dataset content.",
+        "MaturityLevel": "Level 3",
+        "Category": "[H] Hosting environment capabilities",
+        "SubCategory": "Searching Capability",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-3-h3",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      },
+      {
+        "Id": 5,
+        "IndicatorId": "DSM-4-H2",
+        "IndicatorText": "Data Hosting Environment provides semantic querying capability ",
+        "MaturityLevel": "Level 4",
+        "Category": "[H] Hosting environment capabilities",
+        "SubCategory": "Searching Capability",
+        "URI": "https://fairplus.github.io/Data-Maturity/docs/Indicators/#dsm-4-h2",
+        "IsSelected": false,
+        "SuperIndicators": null,
+        "SkipQuestionIDs": null
+      }
+    ],
+    "Image": "17.jpg"
+  }
+]
