@@ -40,16 +40,17 @@
         "SkipQuestionIDs": null
       }
     ],
-    "Image": "1.jpg"
+    "Image": "1.png"
   },
   {
     "DSMCategory": "[R] Representation and format",
     "DSMCategoryId": 1,
     "SectionName": "Dataset Representation",
     "SectionId": "2",
-    "Question": "Which of the following statements best describe the state of your shareable Datasets?",
+    "Question": "Which of the following statements best describe how the shareable Dataset(s) are modeled and represented?",
     "MultipleAllowed": true,
     "NoneOfAboveAllowed": true,
+    "Info": "This is a data-modelling related requirement. More specifically, this indicator focuses on the data model used to describe the structure of the Dataset which is the form that data is modelled against for the purpose of being utilized for FAIR sharing and re-use (DSM-2-C1). This is often represented in the form of pre-defined templates that data owners define for their project data or made available by the data hosting environment to be used for importing and exporting the FAIRified Datasets.",
     "Options": [
       {
         "Id": 1,
@@ -102,7 +103,7 @@
         "SkipQuestionIDs": null
       }
     ],
-    "Image": "2.jpg"
+    "Image": "2.png"
   },
   {
     "DSMCategory": "[R] Representation and format",
@@ -177,6 +178,7 @@
     "Question": "Which of the following statements best describes the current state of the Dataset\u0027s Metadata?",
     "MultipleAllowed": false,
     "NoneOfAboveAllowed": false,
+    "Info": "A data descriptor is a data structure that contains any information that describes a dataset, i.e. it is a record representing the dataset’s metadata.",
     "Options": [
       {
         "Id": 1,
@@ -208,7 +210,7 @@
         "SkipQuestionIDs": null
       }
     ],
-    "Image": "4.jpg"
+    "Image": "4.png"
   },
   {
     "DSMCategory": "[R] Representation and format",
@@ -372,6 +374,7 @@
     "Question": "Which of the following statements best describes how information describing the context of the dataset(s) is represented?",
     "MultipleAllowed": false,
     "NoneOfAboveAllowed": false,
+    "Info": "Contextual Metadata is a type of metadata that describes the context in which the dataset was produced within. Contextual metadata is necessary to preserve the integrity of the data and provides the means to understand and enable the interpretation of the data to anyone wishing to use this data. In the biomedical domain, this information includes concepts that make up the study design such as the assessments or assays that generated the data, as well as the entities that data is collected for such as subjects, samples, cell lines, or molecular entities and the relationships between them.",
     "Options": [
       {
         "Id": 1,
@@ -453,7 +456,7 @@
         "SkipQuestionIDs": null
       }
     ],
-    "Image": "7.jpg"
+    "Image": "7.png"
   },
   {
     "DSMCategory": "[C] Content \u0026 Context",

@@ -8,7 +8,7 @@
       margin: 0;
     }
     .card-container ::ng-deep > .ant-tabs-card .ant-tabs-content {
-      height: 400px;
+      min-height: 400px;
       margin-top: -16px;
     }
     .card-container ::ng-deep > .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {

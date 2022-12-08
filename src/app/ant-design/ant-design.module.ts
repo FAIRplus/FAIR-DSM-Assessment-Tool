@@ -83,7 +83,8 @@ import { NzResizableModule } from 'ng-zorro-antd/resizable';
     NzTagModule,
     NzTabsModule,
     NzRadioModule,
-    NzCollapseModule
+    NzCollapseModule,
+    NzGridModule
   ]
 })
 export class AntDesignModule { }

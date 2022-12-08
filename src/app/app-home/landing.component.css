@@ -1293,7 +1293,7 @@ home-text22.hover{
   background-size: contain;
   background-repeat: no-repeat;
   justify-content: flex-end;
-  background-image: url("../../assets/conceptual-model.png");
+  background-image: url("../../assets/img/overview/conceptual-model.png");
   background-position: center;
   border-top-left-radius: var(--dl-radius-radius-radius50);
   border-top-right-radius: var(--dl-radius-radius-radius50);

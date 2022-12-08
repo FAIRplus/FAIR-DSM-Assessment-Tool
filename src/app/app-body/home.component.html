@@ -9,13 +9,17 @@
 
         <nz-collapse [nzBordered]="false" nz-button="ko">
           <nz-collapse-panel nzHeader="More Info">
-            <p>
-              {{tab1CurrentData.Info}}
-            </p>
-            <p>
-              <img class="tab-question-img" srcset="../../assets/img/{{tab1CurrentData.Image}}"
-                 [title]="tab1CurrentData.SectionName"/>
-            </p>
+            <div nz-row>
+              <div nz-col nzSpan="10"><p>
+                {{tab1CurrentData.Info}}
+              </p></div>
+              <div nz-col nzSpan="8" nzOffset="2"><p>
+                <img class="tab-question-img" srcset="../../assets/img/{{tab1CurrentData.Image}}"
+                     [title]="tab1CurrentData.SectionName"/>
+              </p></div>
+            </div>
+
+
           </nz-collapse-panel>
         </nz-collapse>
 
