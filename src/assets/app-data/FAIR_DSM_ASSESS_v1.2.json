@@ -7,6 +7,7 @@
     "Question": "Which of the following statements best describes the current state of Data to be shared and re-used?",
     "MultipleAllowed": false,
     "NoneOfAboveAllowed": false,
+    "Info": "This is a pre-requisite requirement to define the unit of data that is the subject-matter of the FAIRification process. This requirement requires the data managers to consider the form and the representation of data into Datasets that are designed and purposed for sharing and re-use by users unfamiliar with the data.",
     "Options": [
       {
         "Id": 1,

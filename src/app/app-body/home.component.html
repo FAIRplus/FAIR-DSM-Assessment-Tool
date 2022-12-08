@@ -10,6 +10,9 @@
         <nz-collapse [nzBordered]="false" nz-button="ko">
           <nz-collapse-panel nzHeader="More Info">
             <p>
+              {{tab1CurrentData.Info}}
+            </p>
+            <p>
               <img class="tab-question-img" srcset="../../assets/img/{{tab1CurrentData.Image}}"
                  [title]="tab1CurrentData.SectionName"/>
             </p>

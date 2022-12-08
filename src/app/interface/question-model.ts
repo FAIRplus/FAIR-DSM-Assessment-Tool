@@ -10,6 +10,7 @@ export interface QuestionModel {
     NoneOfAboveAllowed: boolean;
     IsAnswered: boolean;
     Image: string;
+    Info: string;
   }
   export interface OptionsEntity {
     Id: number;

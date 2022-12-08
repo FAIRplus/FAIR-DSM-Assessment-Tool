@@ -185,7 +185,13 @@ export class HomeComponent implements OnInit {
 
         this.tab1CurrentDataIndex=findNextIndex;
 
-        if(this.tab1Data.length <= (this.tab1CurrentDataIndex)){
+        if(this.tab1Data.length + this.tab2Data.length <= (this.tab1CurrentDataIndex)){
+          const diff= this.tab1CurrentDataIndex -this.tab1Data.length - this.tab2Data.length;
+          this.tabClicked(2,diff);
+          console.log('jump')
+          return;
+        }
+        else if(this.tab1Data.length <= (this.tab1CurrentDataIndex)){
           const diff= this.tab1CurrentDataIndex -this.tab1Data.length;
           this.tabClicked(1,diff);
           console.log('jump')
