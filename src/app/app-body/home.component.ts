@@ -498,10 +498,7 @@ export class HomeComponent implements OnInit {
   }
 
   radioChecked(sourceTab: number,data: QuestionModel,selectedOption: OptionsEntity,event?: any) {
-    // console.log(' questionID, selectedOptionID ',data.SectionId,selectedOption.Id,event.target.checked);
-    (selectedOption.SkipQuestionIDs||[]).forEach(id=>{
-      this.QuestionsToSkip.add(id);
-    });
+    // console.log(' questionID, selectedOptionID ',data.SectionId,data.Options,selectedOption.Id,event.target.checked);
 
     let chekedValue = event.target.checked;
      if (sourceTab == 1)
@@ -510,6 +507,18 @@ export class HomeComponent implements OnInit {
       this.updateTabData(2,data, selectedOption.Id, chekedValue);
     else if (sourceTab == 3)
       this.updateTabData(3,data, selectedOption.Id, chekedValue);
+    
+    data.Options?.forEach(checkId=>{
+          if(checkId.Id === selectedOption.Id){
+            (checkId.SkipQuestionIDs||[]).forEach(id=>{
+              this.QuestionsToSkip.add(id);
+            })            
+          } else if(checkId.Id !== selectedOption.Id){
+            (checkId.SkipQuestionIDs||[]).forEach(rm=>{
+              this.QuestionsToSkip.delete(rm)
+            })
+          }
+        }); 
   }
 
   updateTabData(sourceTab:number,questionData: QuestionModel,selectedOptionID: number,value: boolean) {
